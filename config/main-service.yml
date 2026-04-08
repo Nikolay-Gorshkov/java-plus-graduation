@@ -1,29 +1,6 @@
 server:
   port: 0
 
-spring:
-  datasource:
-    url: jdbc:postgresql://${EWM_DB_HOST:localhost}:${EWM_DB_PORT:5432}/ewm
-    username: ${EWM_DB_USER:ewm}
-    password: ${EWM_DB_PASSWORD:ewm}
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-
-stats-client:
-  service-id: stats-server
-
 logging:
   level:
-    org.springframework.orm.jpa: INFO
-    org.springframework.transaction: INFO
-    org.springframework.transaction.interceptor: TRACE
-    org.springframework.orm.jpa.JpaTransactionManager: DEBUG
-    org.zalando.logbook: TRACE
-    org.hibernate.SQL: DEBUG
-    org.hibernate.orm.jdbc.bind: TRACE
+    root: INFO
