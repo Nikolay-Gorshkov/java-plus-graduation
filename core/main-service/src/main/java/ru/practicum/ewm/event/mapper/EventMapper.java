@@ -26,12 +26,12 @@ public interface EventMapper {
 
     @Named("event")
     @AfterMapping
-    default void setDefaultCreatedOn(@MappingTarget Event.EventBuilder event) {
-        event.createdOn(LocalDateTime.now());
-        event.state(StateEvent.PENDING);
-        event.confirmedRequests(0L);
-        event.views(0L);
-        event.rating(0L);
+    default void setDefaultCreatedOn(@MappingTarget Event event) {
+        event.setCreatedOn(LocalDateTime.now());
+        event.setState(StateEvent.PENDING);
+        event.setConfirmedRequests(0L);
+        event.setViews(0L);
+        event.setRating(0L);
     }
 
     EventFullDto toEventFullDto(Event event);

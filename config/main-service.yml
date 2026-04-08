@@ -1,11 +1,11 @@
 server:
-  port: 8080
+  port: 0
 
 spring:
   datasource:
-    url: jdbc:postgresql://ewm-db:5432/ewm
-    username: ewm
-    password: ewm
+    url: jdbc:postgresql://${EWM_DB_HOST:localhost}:${EWM_DB_PORT:5432}/ewm
+    username: ${EWM_DB_USER:ewm}
+    password: ${EWM_DB_PASSWORD:ewm}
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -14,6 +14,10 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
+stats-client:
+  service-id: stats-server
+
 logging:
   level:
     org.springframework.orm.jpa: INFO
