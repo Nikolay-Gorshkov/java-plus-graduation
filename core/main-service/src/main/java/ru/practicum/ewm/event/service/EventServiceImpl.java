@@ -56,7 +56,9 @@ public class EventServiceImpl implements EventService {
         User user = userService.findUserById(userId);
         Category category = categoryMapper.toCategory(categoryService.getCategory(newEventDto.getCategory()));
         Location location = locationRepository.save(locationMapper.toLocation(newEventDto.getLocation()));
-        Event event = eventRepository.save(eventMapper.toEvent(newEventDto, user, category, location));
+        Event event = eventMapper.toEvent(newEventDto, user, category, location);
+        applyDefaultEventState(event);
+        event = eventRepository.save(event);
         return eventMapper.toEventFullDto(event);
     }
 
@@ -83,14 +85,14 @@ public class EventServiceImpl implements EventService {
         userService.findUserById(userId);
         Event event = findEventWithOutDto(userId, eventId);
         //проверка статуса
-        if (event.getState().equals(StateEvent.PUBLISHED)) {
+        if (StateEvent.PUBLISHED.equals(event.getState())) {
             throw new ConflictException("Данный Event невозможно изменить, поскольку он уже опубликован");
         } else if (updateEventUserRequest.getStateAction() != null &&
-                (event.getState().equals(StateEvent.CANCELED) &&
+                (StateEvent.CANCELED.equals(event.getState()) &&
                         updateEventUserRequest.getStateAction().equals(StateForUpdateEvent.SEND_TO_REVIEW))) {
             event.setState(StateEvent.PENDING);
         } else if (updateEventUserRequest.getStateAction() != null &&
-                (event.getState().equals(StateEvent.PENDING) &&
+                (StateEvent.PENDING.equals(event.getState()) &&
                         updateEventUserRequest.getStateAction().equals(StateForUpdateEvent.CANCEL_REVIEW))) {
             event.setState(StateEvent.CANCELED);
         }
@@ -122,7 +124,7 @@ public class EventServiceImpl implements EventService {
                         "не ранее чем за час от текущего времени. Текущая дата события: " + event.getEventDate());
             }
         }
-        if (!event.getState().equals(StateEvent.PENDING)) {
+        if (!StateEvent.PENDING.equals(event.getState())) {
             throw new ConflictException("Статус у события, которое планируется опубликовать/отклонить, " +
                     "должен быть PENDING. Текущий статус: " + event.getState());
         }
@@ -211,7 +213,7 @@ public class EventServiceImpl implements EventService {
     @Override
     public EventFullDto findPublicEventById(Long eventId, HttpServletRequest request) {
         Event event = findEventById(eventId);
-        if (!event.getState().equals(StateEvent.PUBLISHED)) {
+        if (!StateEvent.PUBLISHED.equals(event.getState())) {
             throw new NotFoundException("Событие не доступно. Статус события: " + event.getState());
         }
         List<Event> eventWithView = getStats(List.of(event), null, null, true);
@@ -275,5 +277,20 @@ public class EventServiceImpl implements EventService {
                 .uri(httpServletRequest.getRequestURI())
                 .ip(httpServletRequest.getRemoteAddr())
                 .build());
+    }
+
+    private void applyDefaultEventState(Event event) {
+        if (event.getCreatedOn() == null) {
+            event.setCreatedOn(LocalDateTime.now());
+        }
+        if (event.getState() == null) {
+            event.setState(StateEvent.PENDING);
+        }
+        if (event.getConfirmedRequests() == null) {
+            event.setConfirmedRequests(0L);
+        }
+        if (event.getViews() == null) {
+            event.setViews(0L);
+        }
     }
 }

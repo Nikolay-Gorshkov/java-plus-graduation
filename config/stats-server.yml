@@ -1,0 +1,26 @@
+server:
+  port: 0
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://${STATS_DB_HOST:localhost}:${STATS_DB_PORT:5432}/stat-server
+    username: ${STATS_DB_USER:stat}
+    password: ${STATS_DB_PASSWORD:stat}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    org.springframework.orm.jpa: INFO
+    org.springframework.transaction: INFO
+    org.springframework.transaction.interceptor: TRACE
+    org.springframework.orm.jpa.JpaTransactionManager: DEBUG
+    org.zalando.logbook: TRACE
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE

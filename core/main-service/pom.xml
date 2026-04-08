@@ -7,18 +7,12 @@
 
     <parent>
         <groupId>ru.practicum</groupId>
-        <artifactId>explore-with-me</artifactId>
+        <artifactId>core</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>main-service</artifactId>
     <name>main-service</name>
-
-    <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -41,6 +35,7 @@
         <dependency>
             <groupId>org.zalando</groupId>
             <artifactId>logbook-spring-boot-starter</artifactId>
+            <version>${logbook.version}</version>
         </dependency>
 
         <dependency>
@@ -53,6 +48,7 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
         </dependency>
 
         <dependency>
@@ -82,12 +78,24 @@
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-jpa</artifactId>
             <classifier>jakarta</classifier>
+            <version>${querydsl.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-apt</artifactId>
             <classifier>jakarta</classifier>
+            <version>${querydsl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
 
@@ -114,7 +122,7 @@
                         <groupId>com.querydsl</groupId>
                         <artifactId>querydsl-apt</artifactId>
                         <classifier>jakarta</classifier>
-                        <version>5.1.0</version>
+                        <version>${querydsl.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
