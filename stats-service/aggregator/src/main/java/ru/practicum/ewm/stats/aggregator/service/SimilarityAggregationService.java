@@ -11,9 +11,12 @@ import ru.practicum.ewm.stats.avro.EventSimilarityAvro;
 import ru.practicum.ewm.stats.avro.UserActionAvro;
 
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
+import java.util.concurrent.CompletableFuture;
 
 @Slf4j
 @Service
@@ -37,6 +40,7 @@ public class SimilarityAggregationService {
         long userId = action.userId();
         long eventId = action.eventId();
         double newWeight = action.actionType().getWeight();
+        List<CompletableFuture<?>> sendFutures = new ArrayList<>();
 
         Map<Long, Double> userWeightsForEvent = eventUserWeights.computeIfAbsent(eventId, key -> new HashMap<>());
         double oldWeight = userWeightsForEvent.getOrDefault(userId, 0.0);
@@ -76,9 +80,11 @@ public class SimilarityAggregationService {
             long first = Math.min(eventId, otherEventId);
             long second = Math.max(eventId, otherEventId);
             EventSimilarityAvro similarity = new EventSimilarityAvro(first, second, score, normalizeTimestamp(action));
-            kafkaTemplate.send(similarityTopic, first + "-" + second, AvroSerde.serialize(similarity));
+            sendFutures.add(kafkaTemplate.send(similarityTopic, first + "-" + second, AvroSerde.serialize(similarity)));
             log.debug("Updated similarity: {}-{} -> {}", first, second, score);
         }
+
+        sendFutures.forEach(CompletableFuture::join);
     }
 
     private Instant normalizeTimestamp(UserActionAvro action) {
