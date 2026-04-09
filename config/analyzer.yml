@@ -1,0 +1,30 @@
+server:
+  port: 0
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${STATS_DB_HOST:localhost}:${STATS_DB_PORT:5433}/stats
+    username: ${STATS_DB_USER:stats}
+    password: ${STATS_DB_PASSWORD:stats}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  kafka:
+    consumer:
+      group-id: analyzer
+
+grpc:
+  server:
+    port: 0
+
+logging:
+  level:
+    root: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+    ru.practicum.ewm.stats.analyzer: DEBUG

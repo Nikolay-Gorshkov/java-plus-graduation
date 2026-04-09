@@ -1,0 +1,11 @@
+server:
+  port: 0
+
+grpc:
+  server:
+    port: 0
+
+logging:
+  level:
+    root: INFO
+    ru.practicum.ewm.stats.collector: DEBUG

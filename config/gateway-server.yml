@@ -5,10 +5,6 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: rating-service-private-api
-          uri: lb://RATING-SERVICE
-          predicates:
-            - Path=/users/*/events/*/rating
         - id: event-service-request-api
           uri: lb://EVENT-SERVICE
           predicates:
@@ -21,15 +17,7 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/admin/users/**
-        - id: rating-service-public-api
-          uri: lb://RATING-SERVICE
-          predicates:
-            - Path=/events/*/rating
         - id: event-service-api
           uri: lb://EVENT-SERVICE
           predicates:
             - Path=/admin/categories/**,/categories/**,/admin/compilations/**,/compilations/**,/admin/events/**,/users/*/events/**,/events/**
-        - id: stats-service-api
-          uri: lb://STATS-SERVER
-          predicates:
-            - Path=/hit,/stats

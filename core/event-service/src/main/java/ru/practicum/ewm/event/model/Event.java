@@ -75,10 +75,7 @@ public class Event {
     private String title;
 
     @Transient
-    private Long views;
-
-    @Transient
-    private Long rating;
+    private Double rating;
 
     @JsonIgnore
     @ToString.Exclude

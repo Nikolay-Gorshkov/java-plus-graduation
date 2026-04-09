@@ -1,52 +1,46 @@
 package ru.korshunov.statsclient;
 
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Past;
-import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Positive;
 import org.springframework.validation.annotation.Validated;
-import statsdto.HitDto;
-import statsdto.StatDto;
 
-import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
 @Validated
 public interface StatsClient {
 
-    void addHit(@Valid HitDto hitDto);
+    void collectUserAction(@Positive long userId, @Positive long eventId, ActionType actionType);
 
-    List<StatDto> getStats(@NotNull(message = "Дата начала не долна быть пустой")
-                           @Past(message = "Дата начала должна быть в прошлом")
-                           LocalDateTime start,
-                           @NotNull(message = "Дата конца не долна быть пустой")
-                           @PastOrPresent(message = "Дата конца не может быть в будущем")
-                           LocalDateTime end);
+    default void collectView(@Positive long userId, @Positive long eventId) {
+        collectUserAction(userId, eventId, ActionType.VIEW);
+    }
 
-    List<StatDto> getStats(@NotNull(message = "Дата начала не долна быть пустой")
-                           @Past(message = "Дата начала должна быть в прошлом")
-                           LocalDateTime start,
-                           @NotNull(message = "Дата конца не долна быть пустой")
-                           @PastOrPresent(message = "Дата конца не может быть в будущем")
-                           LocalDateTime end,
-                           @NotNull(message = "Отсутствует список URI")
-                           List<String> uris);
+    default void collectRegister(@Positive long userId, @Positive long eventId) {
+        collectUserAction(userId, eventId, ActionType.REGISTER);
+    }
 
-    List<StatDto> getStats(@NotNull(message = "Дата начала не долна быть пустой")
-                           @Past(message = "Дата начала должна быть в прошлом")
-                           LocalDateTime start,
-                           @NotNull(message = "Дата конца не долна быть пустой")
-                           @PastOrPresent(message = "Дата конца не может быть в будущем")
-                           LocalDateTime end,
-                           @NotNull(message = "Отсутствует флаг уникальности")
-                           Boolean unique);
+    default void collectLike(@Positive long userId, @Positive long eventId) {
+        collectUserAction(userId, eventId, ActionType.LIKE);
+    }
 
-    List<StatDto> getStats(@NotNull(message = "Дата начала не долна быть пустой")
-                           LocalDateTime start,
-                           @NotNull(message = "Дата конца не долна быть пустой")
-                           LocalDateTime end,
-                           @NotNull(message = "Отсутствует список URI")
-                           List<String> uris,
-                           @NotNull(message = "Отсутствует флаг уникальности")
-                           Boolean unique);
+    List<RecommendedEvent> getRecommendationsForUser(@Positive long userId, @Positive int maxResults);
+
+    List<RecommendedEvent> getSimilarEvents(@Positive long eventId,
+                                            @Positive long userId,
+                                            @Positive int maxResults);
+
+    Map<Long, Double> getInteractionsCount(@NotEmpty List<@Positive Long> eventIds);
+
+    default double getInteractionCount(@Positive long eventId) {
+        return getInteractionsCount(List.of(eventId)).getOrDefault(eventId, 0.0);
+    }
+
+    default List<RecommendedEvent> getRecommendationsForUser(@Positive long userId) {
+        return getRecommendationsForUser(userId, 10);
+    }
+
+    default List<RecommendedEvent> getSimilarEvents(@Positive long eventId, @Positive long userId) {
+        return getSimilarEvents(eventId, userId, 10);
+    }
 }

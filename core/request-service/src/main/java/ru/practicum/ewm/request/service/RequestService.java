@@ -18,4 +18,6 @@ public interface RequestService {
 
     EventRequestStatusUpdateResult updateEventRequests(Long userId, Long eventId,
                                                        EventRequestStatusUpdateRequest request);
+
+    boolean hasUserParticipation(Long userId, Long eventId);
 }

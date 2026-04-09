@@ -1,0 +1,12 @@
+server:
+  port: 0
+
+spring:
+  kafka:
+    consumer:
+      group-id: aggregator
+
+logging:
+  level:
+    root: INFO
+    ru.practicum.ewm.stats.aggregator: DEBUG
