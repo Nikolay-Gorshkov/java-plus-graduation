@@ -22,4 +22,8 @@ public interface RequestServiceClient {
     EventRequestStatusUpdateResult updateEventRequests(@PathVariable("userId") Long userId,
                                                        @PathVariable("eventId") Long eventId,
                                                        @RequestBody EventRequestStatusUpdateRequest request);
+
+    @GetMapping("/internal/users/{userId}/events/{eventId}/requests/exists")
+    boolean hasUserParticipation(@PathVariable("userId") Long userId,
+                                 @PathVariable("eventId") Long eventId);
 }

@@ -1,8 +1,10 @@
 package ru.practicum.ewm.request.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.korshunov.statsclient.StatsClient;
 import ru.practicum.ewm.client.dto.EventInternalDto;
 import ru.practicum.ewm.client.event.EventServiceClient;
 import ru.practicum.ewm.client.user.UserServiceClient;
@@ -25,12 +27,14 @@ import java.util.Objects;
 @Transactional(readOnly = true)
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class RequestServiceImpl implements RequestService {
 
     private final RequestRepository requestRepository;
     private final UserServiceClient userServiceClient;
     private final EventServiceClient eventServiceClient;
     private final RequestMapper requestMapper;
+    private final StatsClient statsClient;
 
     @Transactional
     @Override
@@ -65,7 +69,13 @@ public class RequestServiceImpl implements RequestService {
             request.setRequestStatus(RequestStatus.PENDING);
         }
 
-        return requestMapper.toRequestDTO(requestRepository.save(request));
+        Request savedRequest = requestRepository.save(request);
+        try {
+            statsClient.collectRegister(userId, eventId);
+        } catch (Exception exception) {
+            log.warn("Не удалось отправить событие регистрации в collector: {}", exception.getMessage());
+        }
+        return requestMapper.toRequestDTO(savedRequest);
     }
 
     @Override
@@ -178,5 +188,16 @@ public class RequestServiceImpl implements RequestService {
             throw new NotFoundException("Event c id - " + eventId + " не найден у пользователя с id - " + userId);
         }
         return event;
+    }
+
+    @Override
+    public boolean hasUserParticipation(Long userId, Long eventId) {
+        userServiceClient.getUser(userId);
+        eventServiceClient.getEvent(eventId);
+        return requestRepository.existsByRequesterIdAndEventIdAndRequestStatusIn(
+                userId,
+                eventId,
+                List.of(RequestStatus.CONFIRMED)
+        );
     }
 }

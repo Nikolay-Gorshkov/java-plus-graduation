@@ -1,19 +1,19 @@
 package ru.practicum.ewm.event.service;
 
 import com.querydsl.core.BooleanBuilder;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.korshunov.statsclient.RecommendedEvent;
 import ru.korshunov.statsclient.StatsClient;
 import ru.practicum.ewm.category.mapper.CategoryMapper;
 import ru.practicum.ewm.category.model.Category;
 import ru.practicum.ewm.category.service.CategoryService;
 import ru.practicum.ewm.client.dto.EventInternalDto;
-import ru.practicum.ewm.client.rating.RatingServiceClient;
+import ru.practicum.ewm.client.request.RequestServiceClient;
 import ru.practicum.ewm.client.user.UserServiceClient;
 import ru.practicum.ewm.error.ConflictException;
 import ru.practicum.ewm.error.NotFoundException;
@@ -33,15 +33,13 @@ import ru.practicum.ewm.event.repository.LocationRepository;
 import ru.practicum.ewm.event.status.SortForParamPublicEvent;
 import ru.practicum.ewm.event.status.StateEvent;
 import ru.practicum.ewm.event.status.StateForUpdateEvent;
-import ru.practicum.ewm.rating.dto.RatingSummaryDto;
 import ru.practicum.ewm.user.dto.UserShortDto;
 import ru.practicum.ewm.util.PageRequestUtil;
-import statsdto.HitDto;
-import statsdto.StatDto;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -56,7 +54,7 @@ import java.util.stream.StreamSupport;
 public class EventServiceImpl implements EventService {
 
     private final UserServiceClient userServiceClient;
-    private final RatingServiceClient ratingServiceClient;
+    private final RequestServiceClient requestServiceClient;
     private final EventMapper eventMapper;
     private final CategoryMapper categoryMapper;
     private final LocationMapper locationMapper;
@@ -167,8 +165,7 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    public List<EventShortDto> findEventByParamsPublic(EventPublicParamsDto eventPublicParamsDto,
-                                                       HttpServletRequest request) {
+    public List<EventShortDto> findEventByParamsPublic(EventPublicParamsDto eventPublicParamsDto) {
         if (eventPublicParamsDto.getRangeEnd() != null && eventPublicParamsDto.getRangeStart() != null
                 && eventPublicParamsDto.getRangeEnd().isBefore(eventPublicParamsDto.getRangeStart())) {
             throw new IllegalStateException("Дата RangeEnd не должна быть раньше даты RangeStart. RangeStart:"
@@ -177,21 +174,66 @@ public class EventServiceImpl implements EventService {
 
         BooleanBuilder booleanBuilder = EventRepository.PredicatesForParamPublic.build(eventPublicParamsDto);
         List<Event> events = loadPublicEvents(booleanBuilder, eventPublicParamsDto);
-        addViewEvent(request);
-
         return events.stream()
                 .map(eventMapper::toEventShortDto)
                 .toList();
     }
 
     @Override
-    public EventFullDto findPublicEventById(Long eventId, HttpServletRequest request) {
+    public EventFullDto findPublicEventById(Long eventId, Long userId) {
+        userServiceClient.getUser(userId);
         Event event = findEventById(eventId);
         if (!StateEvent.PUBLISHED.equals(event.getState())) {
             throw new NotFoundException("Событие не доступно. Статус события: " + event.getState());
         }
-        addViewEvent(request);
+        try {
+            statsClient.collectView(userId, eventId);
+        } catch (Exception exception) {
+            log.warn("Не удалось отправить VIEW в collector: {}", exception.getMessage());
+        }
         return eventMapper.toEventFullDto(enrichEvent(event));
+    }
+
+    @Override
+    public List<EventShortDto> getRecommendationsForUser(Long userId, int maxResults) {
+        userServiceClient.getUser(userId);
+        List<RecommendedEvent> recommendations;
+        try {
+            recommendations = statsClient.getRecommendationsForUser(userId, maxResults);
+        } catch (Exception exception) {
+            log.warn("Не удалось получить рекомендации из analyzer: {}", exception.getMessage());
+            return List.of();
+        }
+        if (recommendations.isEmpty()) {
+            return List.of();
+        }
+
+        List<Long> eventIds = recommendations.stream().map(RecommendedEvent::eventId).toList();
+        Map<Long, Event> eventsById = enrichEvents(eventRepository.findEventsByIds(eventIds)).stream()
+                .collect(Collectors.toMap(Event::getId, Function.identity()));
+
+        List<EventShortDto> result = new ArrayList<>();
+        for (RecommendedEvent recommendation : recommendations) {
+            Event event = eventsById.get(recommendation.eventId());
+            if (event != null && StateEvent.PUBLISHED.equals(event.getState())) {
+                result.add(eventMapper.toEventShortDto(event));
+            }
+        }
+        return result;
+    }
+
+    @Transactional
+    @Override
+    public void likeEvent(Long eventId, Long userId) {
+        userServiceClient.getUser(userId);
+        Event event = findEventById(eventId);
+        if (!StateEvent.PUBLISHED.equals(event.getState())) {
+            throw new NotFoundException("Событие не доступно. Статус события: " + event.getState());
+        }
+        if (!requestServiceClient.hasUserParticipation(userId, eventId)) {
+            throw new IllegalStateException("Пользователь может лайкнуть только мероприятие, в котором участвовал");
+        }
+        statsClient.collectLike(userId, eventId);
     }
 
     @Override
@@ -254,15 +296,9 @@ public class EventServiceImpl implements EventService {
 
     private List<Event> loadPublicEvents(BooleanBuilder booleanBuilder, EventPublicParamsDto params) {
         SortForParamPublicEvent sort = params.getSort();
-        if (SortForParamPublicEvent.RATING.equals(sort)) {
+        if (SortForParamPublicEvent.RATING.equals(sort) || SortForParamPublicEvent.VIEWS.equals(sort)) {
             return sortPublicEventsInMemory(booleanBuilder, params,
-                    Comparator.comparing((Event event) -> Objects.requireNonNullElse(event.getRating(), 0L))
-                            .reversed()
-                            .thenComparing(Event::getId, Comparator.reverseOrder()));
-        }
-        if (SortForParamPublicEvent.VIEWS.equals(sort)) {
-            return sortPublicEventsInMemory(booleanBuilder, params,
-                    Comparator.comparing((Event event) -> Objects.requireNonNullElse(event.getViews(), 0L))
+                    Comparator.comparing((Event event) -> Objects.requireNonNullElse(event.getRating(), 0.0))
                             .reversed()
                             .thenComparing(Event::getId, Comparator.reverseOrder()));
         }
@@ -293,7 +329,6 @@ public class EventServiceImpl implements EventService {
         if (events.isEmpty()) {
             return List.of();
         }
-        applyViews(events);
         applyRatings(events);
         return events;
     }
@@ -303,65 +338,17 @@ public class EventServiceImpl implements EventService {
         return event;
     }
 
-    private void applyViews(List<Event> events) {
-        Map<Long, String> eventsUri = events.stream()
-                .collect(Collectors.toMap(Event::getId, e -> "/events/" + e.getId()));
-
-        try {
-            List<StatDto> statDtos = statsClient.getStats(
-                    LocalDateTime.of(2020, 1, 1, 0, 0),
-                    LocalDateTime.of(2050, 1, 1, 0, 0),
-                    List.copyOf(eventsUri.values()),
-                    true
-            );
-
-            Map<Long, StatDto> statDtoMap = statDtos.stream()
-                    .filter(stat -> stat.getUri().substring(stat.getUri().lastIndexOf("/") + 1).matches("\\d+"))
-                    .collect(Collectors.toMap(
-                            stat -> Long.parseLong(stat.getUri().substring(stat.getUri().lastIndexOf("/") + 1)),
-                            Function.identity()
-                    ));
-
-            for (Event event : events) {
-                StatDto stat = statDtoMap.get(event.getId());
-                event.setViews(stat != null ? stat.getHits() : 0L);
-            }
-        } catch (Exception exception) {
-            log.warn("Не удалось получить статистику просмотров: {}", exception.getMessage());
-            for (Event event : events) {
-                event.setViews(0L);
-            }
-        }
-    }
-
     private void applyRatings(List<Event> events) {
         try {
-            Map<Long, RatingSummaryDto> ratings = ratingServiceClient.getSummaries(
-                            events.stream().map(Event::getId).toList())
-                    .stream()
-                    .collect(Collectors.toMap(RatingSummaryDto::getEventId, Function.identity()));
-
+            Map<Long, Double> ratings = statsClient.getInteractionsCount(events.stream().map(Event::getId).toList());
             for (Event event : events) {
-                RatingSummaryDto ratingSummary = ratings.get(event.getId());
-                event.setRating(ratingSummary != null ? ratingSummary.getRating() : 0L);
+                event.setRating(ratings.getOrDefault(event.getId(), 0.0));
             }
         } catch (Exception exception) {
             log.warn("Не удалось получить рейтинг событий: {}", exception.getMessage());
             for (Event event : events) {
-                event.setRating(0L);
+                event.setRating(0.0);
             }
-        }
-    }
-
-    private void addViewEvent(HttpServletRequest httpServletRequest) {
-        try {
-            statsClient.addHit(HitDto.builder()
-                    .app("event-service")
-                    .uri(httpServletRequest.getRequestURI())
-                    .ip(httpServletRequest.getRemoteAddr())
-                    .build());
-        } catch (Exception exception) {
-            log.warn("Не удалось сохранить hit в stats-service: {}", exception.getMessage());
         }
     }
 
@@ -375,11 +362,8 @@ public class EventServiceImpl implements EventService {
         if (event.getConfirmedRequests() == null) {
             event.setConfirmedRequests(0L);
         }
-        if (event.getViews() == null) {
-            event.setViews(0L);
-        }
         if (event.getRating() == null) {
-            event.setRating(0L);
+            event.setRating(0.0);
         }
     }
 }

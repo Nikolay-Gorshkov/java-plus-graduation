@@ -1,14 +1,67 @@
 services:
-  stats-server:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.1
+    container_name: ewm-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
     ports:
-      - "9090:9090"
+      - "2181:2181"
 
-  stats-db:
-    image: postgres:16.1
-
-  ewm-service:
+  kafka:
+    image: confluentinc/cp-kafka:7.6.1
+    container_name: ewm-kafka
+    depends_on:
+      - zookeeper
     ports:
-      - "8080:8080"
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+
+  kafka-init:
+    image: confluentinc/cp-kafka:7.6.1
+    container_name: ewm-kafka-init
+    depends_on:
+      - kafka
+    entrypoint:
+      - /bin/bash
+      - -c
+      - |
+        cub kafka-ready -b kafka:29092 1 40
+        kafka-topics --create --if-not-exists --bootstrap-server kafka:29092 --topic stats.user-actions.v1 --replication-factor 1 --partitions 3
+        kafka-topics --create --if-not-exists --bootstrap-server kafka:29092 --topic stats.events-similarity.v1 --replication-factor 1 --partitions 3
 
   ewm-db:
     image: postgres:16.1
+    container_name: ewm-db
+    environment:
+      POSTGRES_DB: ewm
+      POSTGRES_USER: ewm
+      POSTGRES_PASSWORD: ewm
+    ports:
+      - "5432:5432"
+    volumes:
+      - ewm-db-data:/var/lib/postgresql/data
+
+  stats-db:
+    image: postgres:16.1
+    container_name: stats-db
+    environment:
+      POSTGRES_DB: stats
+      POSTGRES_USER: stats
+      POSTGRES_PASSWORD: stats
+    ports:
+      - "5433:5432"
+    volumes:
+      - stats-db-data:/var/lib/postgresql/data
+
+volumes:
+  ewm-db-data:
+  stats-db-data:

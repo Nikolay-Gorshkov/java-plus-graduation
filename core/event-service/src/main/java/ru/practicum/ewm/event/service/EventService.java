@@ -1,8 +1,13 @@
 package ru.practicum.ewm.event.service;
 
-import jakarta.servlet.http.HttpServletRequest;
 import ru.practicum.ewm.client.dto.EventInternalDto;
-import ru.practicum.ewm.event.dto.*;
+import ru.practicum.ewm.event.dto.EventAdminParamDto;
+import ru.practicum.ewm.event.dto.EventFullDto;
+import ru.practicum.ewm.event.dto.EventPublicParamsDto;
+import ru.practicum.ewm.event.dto.EventShortDto;
+import ru.practicum.ewm.event.dto.NewEventDto;
+import ru.practicum.ewm.event.dto.UpdateEventAdminRequestDto;
+import ru.practicum.ewm.event.dto.UpdateEventUserRequest;
 import ru.practicum.ewm.event.model.Event;
 
 import java.util.List;
@@ -23,9 +28,13 @@ public interface EventService {
 
     List<EventFullDto> findEventByParamsAdmin(EventAdminParamDto eventParamDto);
 
-    List<EventShortDto> findEventByParamsPublic(EventPublicParamsDto eventPublicParamsDto, HttpServletRequest request);
+    List<EventShortDto> findEventByParamsPublic(EventPublicParamsDto eventPublicParamsDto);
 
-    EventFullDto findPublicEventById(Long eventId, HttpServletRequest request);
+    EventFullDto findPublicEventById(Long eventId, Long userId);
+
+    List<EventShortDto> getRecommendationsForUser(Long userId, int maxResults);
+
+    void likeEvent(Long eventId, Long userId);
 
     Event findEventWithOutDto(Long userId, Long eventId);
 

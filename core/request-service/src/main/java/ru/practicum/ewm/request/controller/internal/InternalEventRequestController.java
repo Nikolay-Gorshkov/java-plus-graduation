@@ -33,4 +33,10 @@ public class InternalEventRequestController {
                                                               @RequestBody EventRequestStatusUpdateRequest request) {
         return requestService.updateEventRequests(userId, eventId, request);
     }
+
+    @GetMapping("/exists")
+    public boolean hasUserParticipation(@PathVariable Long userId,
+                                        @PathVariable Long eventId) {
+        return requestService.hasUserParticipation(userId, eventId);
+    }
 }

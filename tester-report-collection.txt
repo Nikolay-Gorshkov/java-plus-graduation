@@ -1,0 +1,1064 @@
+--------------------------------
+Лог выполнения от 10/04/2026 - 00:26:29.226 MSK
+--------------------------------
+10/04/2026 - 00:26:29.235 MSK -- [Trace]: Сгенерирован следующий набор событий о действиях пользователей:
+{ user: 1, event: 6, type: ACTION_VIEW, timestamp: 2026-04-06T21:26:29.231022Z }
+{ user: 4, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-06T21:32:18.539022Z }
+{ user: 2, event: 4, type: ACTION_VIEW, timestamp: 2026-04-06T21:34:15.231022Z }
+{ user: 2, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T21:37:33.110022Z }
+{ user: 2, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-06T21:39:39.037022Z }
+{ user: 4, event: 14, type: ACTION_VIEW, timestamp: 2026-04-06T21:46:58.384022Z }
+{ user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-06T21:55:06.544022Z }
+{ user: 4, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-06T21:58:25.715022Z }
+{ user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-06T22:08:16.787022Z }
+{ user: 2, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T22:09:57.162022Z }
+{ user: 2, event: 7, type: ACTION_VIEW, timestamp: 2026-04-06T22:14:50.693022Z }
+{ user: 3, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-06T22:15:52.080022Z }
+{ user: 4, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-06T22:17:21.096022Z }
+{ user: 1, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T22:19:42.216022Z }
+{ user: 2, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-06T22:24:12.421022Z }
+{ user: 6, event: 4, type: ACTION_REGISTER, timestamp: 2026-04-06T22:32:20.661022Z }
+{ user: 2, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-06T22:33:55.375022Z }
+{ user: 1, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-06T22:38:11.804022Z }
+{ user: 6, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-06T22:43:04.085022Z }
+{ user: 1, event: 6, type: ACTION_REGISTER, timestamp: 2026-04-06T22:47:21.459022Z }
+{ user: 6, event: 9, type: ACTION_VIEW, timestamp: 2026-04-06T22:50:43.554022Z }
+{ user: 6, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T22:54:43.440022Z }
+{ user: 1, event: 13, type: ACTION_REGISTER, timestamp: 2026-04-06T23:00:55.833022Z }
+{ user: 5, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T23:02:09.314022Z }
+{ user: 3, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T23:10:10.054022Z }
+{ user: 5, event: 9, type: ACTION_VIEW, timestamp: 2026-04-06T23:12:28.886022Z }
+{ user: 2, event: 10, type: ACTION_VIEW, timestamp: 2026-04-06T23:21:09.748022Z }
+{ user: 6, event: 8, type: ACTION_VIEW, timestamp: 2026-04-06T23:29:22.395022Z }
+{ user: 5, event: 10, type: ACTION_VIEW, timestamp: 2026-04-06T23:30:35.351022Z }
+{ user: 6, event: 12, type: ACTION_VIEW, timestamp: 2026-04-06T23:40:31.000022Z }
+{ user: 1, event: 5, type: ACTION_VIEW, timestamp: 2026-04-06T23:43:17.542022Z }
+{ user: 1, event: 11, type: ACTION_VIEW, timestamp: 2026-04-06T23:48:14.304022Z }
+{ user: 3, event: 8, type: ACTION_REGISTER, timestamp: 2026-04-06T23:49:44.967022Z }
+{ user: 4, event: 6, type: ACTION_REGISTER, timestamp: 2026-04-06T23:58:01.265022Z }
+{ user: 4, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T00:04:47.127022Z }
+{ user: 3, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T00:08:17.732022Z }
+{ user: 5, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T00:09:58.478022Z }
+{ user: 6, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T00:14:30.106022Z }
+{ user: 6, event: 13, type: ACTION_REGISTER, timestamp: 2026-04-07T00:18:39.881022Z }
+{ user: 1, event: 8, type: ACTION_REGISTER, timestamp: 2026-04-07T00:25:53.148022Z }
+{ user: 4, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T00:27:48.560022Z }
+{ user: 6, event: 9, type: ACTION_VIEW, timestamp: 2026-04-07T00:35:06.263022Z }
+{ user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-07T00:43:44.264022Z }
+{ user: 1, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T00:49:50.017022Z }
+{ user: 6, event: 11, type: ACTION_LIKE, timestamp: 2026-04-07T00:52:29.403022Z }
+{ user: 5, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-07T01:00:36.500022Z }
+{ user: 5, event: 7, type: ACTION_LIKE, timestamp: 2026-04-07T01:06:27.984022Z }
+{ user: 4, event: 6, type: ACTION_LIKE, timestamp: 2026-04-07T01:13:47.017022Z }
+{ user: 1, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-07T01:17:10.094022Z }
+{ user: 5, event: 5, type: ACTION_VIEW, timestamp: 2026-04-07T01:19:26.163022Z }
+{ user: 2, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-07T01:28:02.054022Z }
+{ user: 6, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-07T01:29:03.216022Z }
+{ user: 1, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T01:30:57.394022Z }
+{ user: 3, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T01:36:56.536022Z }
+{ user: 2, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:38:37.649022Z }
+{ user: 2, event: 14, type: ACTION_LIKE, timestamp: 2026-04-07T01:45:31.969022Z }
+{ user: 1, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T01:46:39.671022Z }
+{ user: 5, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:53:25.957022Z }
+{ user: 6, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:58:04.147022Z }
+{ user: 4, event: 11, type: ACTION_VIEW, timestamp: 2026-04-07T02:02:01.180022Z }
+{ user: 5, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T02:11:39.484022Z }
+{ user: 1, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T02:14:19.070022Z }
+{ user: 2, event: 1, type: ACTION_VIEW, timestamp: 2026-04-07T02:16:05.765022Z }
+{ user: 4, event: 12, type: ACTION_VIEW, timestamp: 2026-04-07T02:22:20.459022Z }
+{ user: 3, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T02:25:50.092022Z }
+{ user: 2, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T02:33:52.937022Z }
+{ user: 1, event: 8, type: ACTION_LIKE, timestamp: 2026-04-07T02:35:33.353022Z }
+{ user: 3, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-07T02:44:18.670022Z }
+{ user: 3, event: 8, type: ACTION_LIKE, timestamp: 2026-04-07T02:47:44.337022Z }
+{ user: 5, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-07T02:55:18.441022Z }
+{ user: 1, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T02:58:52.524022Z }
+{ user: 1, event: 2, type: ACTION_VIEW, timestamp: 2026-04-07T03:03:37.980022Z }
+{ user: 3, event: 10, type: ACTION_VIEW, timestamp: 2026-04-07T03:07:41.751022Z }
+{ user: 5, event: 4, type: ACTION_VIEW, timestamp: 2026-04-07T03:11:36.645022Z }
+{ user: 2, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T03:15:14.355022Z }
+{ user: 3, event: 9, type: ACTION_VIEW, timestamp: 2026-04-07T03:16:46.094022Z }
+{ user: 6, event: 13, type: ACTION_LIKE, timestamp: 2026-04-07T03:26:27.762022Z }
+{ user: 1, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T03:35:31.766022Z }
+{ user: 6, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-07T03:39:52.763022Z }
+{ user: 1, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-07T03:44:51.185022Z }
+{ user: 5, event: 5, type: ACTION_VIEW, timestamp: 2026-04-07T03:50:07.243022Z }
+{ user: 5, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T03:55:53.423022Z }
+{ user: 6, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T03:57:00.089022Z }
+{ user: 3, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T03:59:55.532022Z }
+{ user: 1, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T04:05:13.172022Z }
+{ user: 2, event: 5, type: ACTION_LIKE, timestamp: 2026-04-07T04:09:43.326022Z }
+{ user: 3, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-07T04:17:45.841022Z }
+{ user: 5, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T04:22:20.713022Z }
+{ user: 2, event: 2, type: ACTION_LIKE, timestamp: 2026-04-07T04:23:52.361022Z }
+{ user: 2, event: 10, type: ACTION_VIEW, timestamp: 2026-04-07T04:30:58.070022Z }
+{ user: 1, event: 12, type: ACTION_REGISTER, timestamp: 2026-04-07T04:38:26.616022Z }
+{ user: 4, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T04:44:07.662022Z }
+{ user: 2, event: 1, type: ACTION_VIEW, timestamp: 2026-04-07T04:49:12.423022Z }
+{ user: 6, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-07T04:59:08.367022Z }
+{ user: 2, event: 4, type: ACTION_REGISTER, timestamp: 2026-04-07T05:01:03.730022Z }
+{ user: 3, event: 4, type: ACTION_VIEW, timestamp: 2026-04-07T05:07:58.079022Z }
+10/04/2026 - 00:26:29.237 MSK -- Начинаю тестирование. Сгенерировано 96 событий
+10/04/2026 - 00:26:29.237 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:29.237 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 6, type: ACTION_VIEW, timestamp: 2026-04-06T21:26:29.231022Z }
+10/04/2026 - 00:26:29.502 MSK -- [Trace]: Событие отправлено: { user: 1, event: 6, type: ACTION_VIEW, timestamp: 2026-04-06T21:26:29.231022Z }
+10/04/2026 - 00:26:29.502 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 6, type: ACTION_VIEW, timestamp: 2026-04-06T21:26:29.231022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:32.651 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 6, type: VIEW, timestamp: 2026-04-06T21:26:29.231Z }
+10/04/2026 - 00:26:32.651 MSK -- Событие VIEW пользователя 1 с мероприятием 6 - проверено
+--------------------------------
+10/04/2026 - 00:26:32.651 MSK -- Верификация для события закончена: { user: 1, event: 6, type: ACTION_VIEW, timestamp: 2026-04-06T21:26:29.231022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:32.651 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:32.651 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-06T21:32:18.539022Z }
+10/04/2026 - 00:26:32.655 MSK -- [Trace]: Событие отправлено: { user: 4, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-06T21:32:18.539022Z }
+10/04/2026 - 00:26:32.655 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-06T21:32:18.539022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:33.154 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 14, type: REGISTER, timestamp: 2026-04-06T21:32:18.539Z }
+10/04/2026 - 00:26:33.154 MSK -- Событие REGISTER пользователя 4 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:33.154 MSK -- Верификация для события закончена: { user: 4, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-06T21:32:18.539022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:33.154 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:33.154 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 4, type: ACTION_VIEW, timestamp: 2026-04-06T21:34:15.231022Z }
+10/04/2026 - 00:26:33.156 MSK -- [Trace]: Событие отправлено: { user: 2, event: 4, type: ACTION_VIEW, timestamp: 2026-04-06T21:34:15.231022Z }
+10/04/2026 - 00:26:33.156 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 4, type: ACTION_VIEW, timestamp: 2026-04-06T21:34:15.231022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:33.661 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 4, type: VIEW, timestamp: 2026-04-06T21:34:15.231Z }
+10/04/2026 - 00:26:33.661 MSK -- Событие VIEW пользователя 2 с мероприятием 4 - проверено
+--------------------------------
+10/04/2026 - 00:26:33.661 MSK -- Верификация для события закончена: { user: 2, event: 4, type: ACTION_VIEW, timestamp: 2026-04-06T21:34:15.231022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:33.661 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:33.661 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T21:37:33.110022Z }
+10/04/2026 - 00:26:33.665 MSK -- [Trace]: Событие отправлено: { user: 2, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T21:37:33.110022Z }
+10/04/2026 - 00:26:33.666 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T21:37:33.110022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:34.168 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 3, type: VIEW, timestamp: 2026-04-06T21:37:33.110Z }
+10/04/2026 - 00:26:34.168 MSK -- Событие VIEW пользователя 2 с мероприятием 3 - проверено
+--------------------------------
+10/04/2026 - 00:26:34.168 MSK -- Верификация для события закончена: { user: 2, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T21:37:33.110022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:34.168 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:34.168 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-06T21:39:39.037022Z }
+10/04/2026 - 00:26:34.172 MSK -- [Trace]: Событие отправлено: { user: 2, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-06T21:39:39.037022Z }
+10/04/2026 - 00:26:34.172 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-06T21:39:39.037022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:34.675 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 10, type: REGISTER, timestamp: 2026-04-06T21:39:39.037Z }
+10/04/2026 - 00:26:34.675 MSK -- Событие REGISTER пользователя 2 с мероприятием 10 - проверено
+--------------------------------
+10/04/2026 - 00:26:34.675 MSK -- Верификация для события закончена: { user: 2, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-06T21:39:39.037022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:34.675 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:34.675 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 14, type: ACTION_VIEW, timestamp: 2026-04-06T21:46:58.384022Z }
+10/04/2026 - 00:26:34.678 MSK -- [Trace]: Событие отправлено: { user: 4, event: 14, type: ACTION_VIEW, timestamp: 2026-04-06T21:46:58.384022Z }
+10/04/2026 - 00:26:34.678 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 14, type: ACTION_VIEW, timestamp: 2026-04-06T21:46:58.384022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:35.184 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 14, type: VIEW, timestamp: 2026-04-06T21:46:58.384Z }
+10/04/2026 - 00:26:35.184 MSK -- Событие VIEW пользователя 4 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:35.184 MSK -- Верификация для события закончена: { user: 4, event: 14, type: ACTION_VIEW, timestamp: 2026-04-06T21:46:58.384022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:35.184 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:35.184 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-06T21:55:06.544022Z }
+10/04/2026 - 00:26:35.187 MSK -- [Trace]: Событие отправлено: { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-06T21:55:06.544022Z }
+10/04/2026 - 00:26:35.187 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-06T21:55:06.544022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:35.692 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 14, type: LIKE, timestamp: 2026-04-06T21:55:06.544Z }
+10/04/2026 - 00:26:35.692 MSK -- Событие LIKE пользователя 4 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:35.692 MSK -- Верификация для события закончена: { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-06T21:55:06.544022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:35.692 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:35.692 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-06T21:58:25.715022Z }
+10/04/2026 - 00:26:35.695 MSK -- [Trace]: Событие отправлено: { user: 4, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-06T21:58:25.715022Z }
+10/04/2026 - 00:26:35.695 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-06T21:58:25.715022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:36.200 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 9, type: REGISTER, timestamp: 2026-04-06T21:58:25.715Z }
+10/04/2026 - 00:26:36.200 MSK -- Событие REGISTER пользователя 4 с мероприятием 9 - проверено
+--------------------------------
+10/04/2026 - 00:26:36.200 MSK -- Верификация для события закончена: { user: 4, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-06T21:58:25.715022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:36.200 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:36.200 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-06T22:08:16.787022Z }
+10/04/2026 - 00:26:36.203 MSK -- [Trace]: Событие отправлено: { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-06T22:08:16.787022Z }
+10/04/2026 - 00:26:36.203 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-06T22:08:16.787022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:36.707 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 14, type: LIKE, timestamp: 2026-04-06T22:08:16.787Z }
+10/04/2026 - 00:26:36.707 MSK -- Событие LIKE пользователя 4 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:36.707 MSK -- Верификация для события закончена: { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-06T22:08:16.787022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:36.707 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:36.707 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T22:09:57.162022Z }
+10/04/2026 - 00:26:36.711 MSK -- [Trace]: Событие отправлено: { user: 2, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T22:09:57.162022Z }
+10/04/2026 - 00:26:36.711 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T22:09:57.162022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:37.213 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 3, type: VIEW, timestamp: 2026-04-06T22:09:57.162Z }
+10/04/2026 - 00:26:37.213 MSK -- Событие VIEW пользователя 2 с мероприятием 3 - проверено
+--------------------------------
+10/04/2026 - 00:26:37.213 MSK -- Верификация для события закончена: { user: 2, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T22:09:57.162022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:37.213 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:37.213 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 7, type: ACTION_VIEW, timestamp: 2026-04-06T22:14:50.693022Z }
+10/04/2026 - 00:26:37.216 MSK -- [Trace]: Событие отправлено: { user: 2, event: 7, type: ACTION_VIEW, timestamp: 2026-04-06T22:14:50.693022Z }
+10/04/2026 - 00:26:37.216 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 7, type: ACTION_VIEW, timestamp: 2026-04-06T22:14:50.693022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:37.719 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 7, type: VIEW, timestamp: 2026-04-06T22:14:50.693Z }
+10/04/2026 - 00:26:37.719 MSK -- Событие VIEW пользователя 2 с мероприятием 7 - проверено
+--------------------------------
+10/04/2026 - 00:26:37.719 MSK -- Верификация для события закончена: { user: 2, event: 7, type: ACTION_VIEW, timestamp: 2026-04-06T22:14:50.693022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:37.719 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:37.719 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-06T22:15:52.080022Z }
+10/04/2026 - 00:26:37.725 MSK -- [Trace]: Событие отправлено: { user: 3, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-06T22:15:52.080022Z }
+10/04/2026 - 00:26:37.725 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-06T22:15:52.080022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:37.728 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 14, type: REGISTER, timestamp: 2026-04-06T22:15:52.080Z }
+10/04/2026 - 00:26:37.728 MSK -- Событие REGISTER пользователя 3 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:37.728 MSK -- Верификация для события закончена: { user: 3, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-06T22:15:52.080022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:37.728 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:37.728 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-06T22:17:21.096022Z }
+10/04/2026 - 00:26:37.731 MSK -- [Trace]: Событие отправлено: { user: 4, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-06T22:17:21.096022Z }
+10/04/2026 - 00:26:37.731 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-06T22:17:21.096022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:37.733 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 1, type: REGISTER, timestamp: 2026-04-06T22:17:21.096Z }
+10/04/2026 - 00:26:37.733 MSK -- Событие REGISTER пользователя 4 с мероприятием 1 - проверено
+--------------------------------
+10/04/2026 - 00:26:37.733 MSK -- Верификация для события закончена: { user: 4, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-06T22:17:21.096022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:37.733 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:37.733 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T22:19:42.216022Z }
+10/04/2026 - 00:26:37.735 MSK -- [Trace]: Событие отправлено: { user: 1, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T22:19:42.216022Z }
+10/04/2026 - 00:26:37.736 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T22:19:42.216022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:38.242 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 7, type: REGISTER, timestamp: 2026-04-06T22:19:42.216Z }
+10/04/2026 - 00:26:38.242 MSK -- Событие REGISTER пользователя 1 с мероприятием 7 - проверено
+--------------------------------
+10/04/2026 - 00:26:38.242 MSK -- Верификация для события закончена: { user: 1, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T22:19:42.216022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:38.242 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:38.242 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-06T22:24:12.421022Z }
+10/04/2026 - 00:26:38.245 MSK -- [Trace]: Событие отправлено: { user: 2, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-06T22:24:12.421022Z }
+10/04/2026 - 00:26:38.245 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-06T22:24:12.421022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:38.751 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 1, type: REGISTER, timestamp: 2026-04-06T22:24:12.421Z }
+10/04/2026 - 00:26:38.752 MSK -- Событие REGISTER пользователя 2 с мероприятием 1 - проверено
+--------------------------------
+10/04/2026 - 00:26:38.752 MSK -- Верификация для события закончена: { user: 2, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-06T22:24:12.421022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:38.752 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:38.752 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 4, type: ACTION_REGISTER, timestamp: 2026-04-06T22:32:20.661022Z }
+10/04/2026 - 00:26:38.757 MSK -- [Trace]: Событие отправлено: { user: 6, event: 4, type: ACTION_REGISTER, timestamp: 2026-04-06T22:32:20.661022Z }
+10/04/2026 - 00:26:38.757 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 4, type: ACTION_REGISTER, timestamp: 2026-04-06T22:32:20.661022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:38.759 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 4, type: REGISTER, timestamp: 2026-04-06T22:32:20.661Z }
+10/04/2026 - 00:26:38.759 MSK -- Событие REGISTER пользователя 6 с мероприятием 4 - проверено
+--------------------------------
+10/04/2026 - 00:26:38.759 MSK -- Верификация для события закончена: { user: 6, event: 4, type: ACTION_REGISTER, timestamp: 2026-04-06T22:32:20.661022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:38.759 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:38.759 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-06T22:33:55.375022Z }
+10/04/2026 - 00:26:38.761 MSK -- [Trace]: Событие отправлено: { user: 2, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-06T22:33:55.375022Z }
+10/04/2026 - 00:26:38.761 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-06T22:33:55.375022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:38.764 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 5, type: REGISTER, timestamp: 2026-04-06T22:33:55.375Z }
+10/04/2026 - 00:26:38.764 MSK -- Событие REGISTER пользователя 2 с мероприятием 5 - проверено
+--------------------------------
+10/04/2026 - 00:26:38.764 MSK -- Верификация для события закончена: { user: 2, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-06T22:33:55.375022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:38.764 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:38.764 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-06T22:38:11.804022Z }
+10/04/2026 - 00:26:38.767 MSK -- [Trace]: Событие отправлено: { user: 1, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-06T22:38:11.804022Z }
+10/04/2026 - 00:26:38.767 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-06T22:38:11.804022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:39.269 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 11, type: REGISTER, timestamp: 2026-04-06T22:38:11.804Z }
+10/04/2026 - 00:26:39.269 MSK -- Событие REGISTER пользователя 1 с мероприятием 11 - проверено
+--------------------------------
+10/04/2026 - 00:26:39.269 MSK -- Верификация для события закончена: { user: 1, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-06T22:38:11.804022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:39.269 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:39.269 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-06T22:43:04.085022Z }
+10/04/2026 - 00:26:39.273 MSK -- [Trace]: Событие отправлено: { user: 6, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-06T22:43:04.085022Z }
+10/04/2026 - 00:26:39.273 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-06T22:43:04.085022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:39.275 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 11, type: REGISTER, timestamp: 2026-04-06T22:43:04.085Z }
+10/04/2026 - 00:26:39.275 MSK -- Событие REGISTER пользователя 6 с мероприятием 11 - проверено
+--------------------------------
+10/04/2026 - 00:26:39.275 MSK -- Верификация для события закончена: { user: 6, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-06T22:43:04.085022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:39.275 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:39.275 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 6, type: ACTION_REGISTER, timestamp: 2026-04-06T22:47:21.459022Z }
+10/04/2026 - 00:26:39.279 MSK -- [Trace]: Событие отправлено: { user: 1, event: 6, type: ACTION_REGISTER, timestamp: 2026-04-06T22:47:21.459022Z }
+10/04/2026 - 00:26:39.279 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 6, type: ACTION_REGISTER, timestamp: 2026-04-06T22:47:21.459022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:39.281 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 6, type: REGISTER, timestamp: 2026-04-06T22:47:21.459Z }
+10/04/2026 - 00:26:39.281 MSK -- Событие REGISTER пользователя 1 с мероприятием 6 - проверено
+--------------------------------
+10/04/2026 - 00:26:39.281 MSK -- Верификация для события закончена: { user: 1, event: 6, type: ACTION_REGISTER, timestamp: 2026-04-06T22:47:21.459022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:39.281 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:39.281 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 9, type: ACTION_VIEW, timestamp: 2026-04-06T22:50:43.554022Z }
+10/04/2026 - 00:26:39.283 MSK -- [Trace]: Событие отправлено: { user: 6, event: 9, type: ACTION_VIEW, timestamp: 2026-04-06T22:50:43.554022Z }
+10/04/2026 - 00:26:39.283 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 9, type: ACTION_VIEW, timestamp: 2026-04-06T22:50:43.554022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:39.285 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 9, type: VIEW, timestamp: 2026-04-06T22:50:43.554Z }
+10/04/2026 - 00:26:39.285 MSK -- Событие VIEW пользователя 6 с мероприятием 9 - проверено
+--------------------------------
+10/04/2026 - 00:26:39.285 MSK -- Верификация для события закончена: { user: 6, event: 9, type: ACTION_VIEW, timestamp: 2026-04-06T22:50:43.554022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:39.285 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:39.285 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T22:54:43.440022Z }
+10/04/2026 - 00:26:39.287 MSK -- [Trace]: Событие отправлено: { user: 6, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T22:54:43.440022Z }
+10/04/2026 - 00:26:39.287 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T22:54:43.440022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:39.792 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 7, type: REGISTER, timestamp: 2026-04-06T22:54:43.440Z }
+10/04/2026 - 00:26:39.792 MSK -- Событие REGISTER пользователя 6 с мероприятием 7 - проверено
+--------------------------------
+10/04/2026 - 00:26:39.792 MSK -- Верификация для события закончена: { user: 6, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T22:54:43.440022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:39.792 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:39.792 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 13, type: ACTION_REGISTER, timestamp: 2026-04-06T23:00:55.833022Z }
+10/04/2026 - 00:26:39.795 MSK -- [Trace]: Событие отправлено: { user: 1, event: 13, type: ACTION_REGISTER, timestamp: 2026-04-06T23:00:55.833022Z }
+10/04/2026 - 00:26:39.795 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 13, type: ACTION_REGISTER, timestamp: 2026-04-06T23:00:55.833022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:39.797 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 13, type: REGISTER, timestamp: 2026-04-06T23:00:55.833Z }
+10/04/2026 - 00:26:39.797 MSK -- Событие REGISTER пользователя 1 с мероприятием 13 - проверено
+--------------------------------
+10/04/2026 - 00:26:39.797 MSK -- Верификация для события закончена: { user: 1, event: 13, type: ACTION_REGISTER, timestamp: 2026-04-06T23:00:55.833022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:39.797 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:39.797 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T23:02:09.314022Z }
+10/04/2026 - 00:26:39.800 MSK -- [Trace]: Событие отправлено: { user: 5, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T23:02:09.314022Z }
+10/04/2026 - 00:26:39.800 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T23:02:09.314022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:39.802 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 7, type: REGISTER, timestamp: 2026-04-06T23:02:09.314Z }
+10/04/2026 - 00:26:39.802 MSK -- Событие REGISTER пользователя 5 с мероприятием 7 - проверено
+--------------------------------
+10/04/2026 - 00:26:39.802 MSK -- Верификация для события закончена: { user: 5, event: 7, type: ACTION_REGISTER, timestamp: 2026-04-06T23:02:09.314022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:39.802 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:39.802 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T23:10:10.054022Z }
+10/04/2026 - 00:26:39.805 MSK -- [Trace]: Событие отправлено: { user: 3, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T23:10:10.054022Z }
+10/04/2026 - 00:26:39.805 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T23:10:10.054022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:40.311 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 3, type: VIEW, timestamp: 2026-04-06T23:10:10.054Z }
+10/04/2026 - 00:26:40.311 MSK -- Событие VIEW пользователя 3 с мероприятием 3 - проверено
+--------------------------------
+10/04/2026 - 00:26:40.311 MSK -- Верификация для события закончена: { user: 3, event: 3, type: ACTION_VIEW, timestamp: 2026-04-06T23:10:10.054022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:40.311 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:40.311 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 9, type: ACTION_VIEW, timestamp: 2026-04-06T23:12:28.886022Z }
+10/04/2026 - 00:26:40.314 MSK -- [Trace]: Событие отправлено: { user: 5, event: 9, type: ACTION_VIEW, timestamp: 2026-04-06T23:12:28.886022Z }
+10/04/2026 - 00:26:40.314 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 9, type: ACTION_VIEW, timestamp: 2026-04-06T23:12:28.886022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:40.822 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 9, type: VIEW, timestamp: 2026-04-06T23:12:28.886Z }
+10/04/2026 - 00:26:40.822 MSK -- Событие VIEW пользователя 5 с мероприятием 9 - проверено
+--------------------------------
+10/04/2026 - 00:26:40.822 MSK -- Верификация для события закончена: { user: 5, event: 9, type: ACTION_VIEW, timestamp: 2026-04-06T23:12:28.886022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:40.822 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:40.822 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 10, type: ACTION_VIEW, timestamp: 2026-04-06T23:21:09.748022Z }
+10/04/2026 - 00:26:40.825 MSK -- [Trace]: Событие отправлено: { user: 2, event: 10, type: ACTION_VIEW, timestamp: 2026-04-06T23:21:09.748022Z }
+10/04/2026 - 00:26:40.825 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 10, type: ACTION_VIEW, timestamp: 2026-04-06T23:21:09.748022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:40.828 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 10, type: VIEW, timestamp: 2026-04-06T23:21:09.748Z }
+10/04/2026 - 00:26:40.828 MSK -- Событие VIEW пользователя 2 с мероприятием 10 - проверено
+--------------------------------
+10/04/2026 - 00:26:40.828 MSK -- Верификация для события закончена: { user: 2, event: 10, type: ACTION_VIEW, timestamp: 2026-04-06T23:21:09.748022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:40.828 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:40.828 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 8, type: ACTION_VIEW, timestamp: 2026-04-06T23:29:22.395022Z }
+10/04/2026 - 00:26:40.830 MSK -- [Trace]: Событие отправлено: { user: 6, event: 8, type: ACTION_VIEW, timestamp: 2026-04-06T23:29:22.395022Z }
+10/04/2026 - 00:26:40.830 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 8, type: ACTION_VIEW, timestamp: 2026-04-06T23:29:22.395022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:40.833 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 8, type: VIEW, timestamp: 2026-04-06T23:29:22.395Z }
+10/04/2026 - 00:26:40.833 MSK -- Событие VIEW пользователя 6 с мероприятием 8 - проверено
+--------------------------------
+10/04/2026 - 00:26:40.833 MSK -- Верификация для события закончена: { user: 6, event: 8, type: ACTION_VIEW, timestamp: 2026-04-06T23:29:22.395022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:40.833 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:40.833 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 10, type: ACTION_VIEW, timestamp: 2026-04-06T23:30:35.351022Z }
+10/04/2026 - 00:26:40.835 MSK -- [Trace]: Событие отправлено: { user: 5, event: 10, type: ACTION_VIEW, timestamp: 2026-04-06T23:30:35.351022Z }
+10/04/2026 - 00:26:40.835 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 10, type: ACTION_VIEW, timestamp: 2026-04-06T23:30:35.351022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:41.343 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 10, type: VIEW, timestamp: 2026-04-06T23:30:35.351Z }
+10/04/2026 - 00:26:41.343 MSK -- Событие VIEW пользователя 5 с мероприятием 10 - проверено
+--------------------------------
+10/04/2026 - 00:26:41.343 MSK -- Верификация для события закончена: { user: 5, event: 10, type: ACTION_VIEW, timestamp: 2026-04-06T23:30:35.351022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:41.343 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:41.343 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 12, type: ACTION_VIEW, timestamp: 2026-04-06T23:40:31.000022Z }
+10/04/2026 - 00:26:41.345 MSK -- [Trace]: Событие отправлено: { user: 6, event: 12, type: ACTION_VIEW, timestamp: 2026-04-06T23:40:31.000022Z }
+10/04/2026 - 00:26:41.345 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 12, type: ACTION_VIEW, timestamp: 2026-04-06T23:40:31.000022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:41.849 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 12, type: VIEW, timestamp: 2026-04-06T23:40:31Z }
+10/04/2026 - 00:26:41.849 MSK -- Событие VIEW пользователя 6 с мероприятием 12 - проверено
+--------------------------------
+10/04/2026 - 00:26:41.849 MSK -- Верификация для события закончена: { user: 6, event: 12, type: ACTION_VIEW, timestamp: 2026-04-06T23:40:31.000022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:41.849 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:41.849 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 5, type: ACTION_VIEW, timestamp: 2026-04-06T23:43:17.542022Z }
+10/04/2026 - 00:26:41.851 MSK -- [Trace]: Событие отправлено: { user: 1, event: 5, type: ACTION_VIEW, timestamp: 2026-04-06T23:43:17.542022Z }
+10/04/2026 - 00:26:41.851 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 5, type: ACTION_VIEW, timestamp: 2026-04-06T23:43:17.542022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:41.852 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 5, type: VIEW, timestamp: 2026-04-06T23:43:17.542Z }
+10/04/2026 - 00:26:41.852 MSK -- Событие VIEW пользователя 1 с мероприятием 5 - проверено
+--------------------------------
+10/04/2026 - 00:26:41.853 MSK -- Верификация для события закончена: { user: 1, event: 5, type: ACTION_VIEW, timestamp: 2026-04-06T23:43:17.542022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:41.853 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:41.853 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 11, type: ACTION_VIEW, timestamp: 2026-04-06T23:48:14.304022Z }
+10/04/2026 - 00:26:41.855 MSK -- [Trace]: Событие отправлено: { user: 1, event: 11, type: ACTION_VIEW, timestamp: 2026-04-06T23:48:14.304022Z }
+10/04/2026 - 00:26:41.856 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 11, type: ACTION_VIEW, timestamp: 2026-04-06T23:48:14.304022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:42.360 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 11, type: VIEW, timestamp: 2026-04-06T23:48:14.304Z }
+10/04/2026 - 00:26:42.360 MSK -- Событие VIEW пользователя 1 с мероприятием 11 - проверено
+--------------------------------
+10/04/2026 - 00:26:42.360 MSK -- Верификация для события закончена: { user: 1, event: 11, type: ACTION_VIEW, timestamp: 2026-04-06T23:48:14.304022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:42.360 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:42.360 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 8, type: ACTION_REGISTER, timestamp: 2026-04-06T23:49:44.967022Z }
+10/04/2026 - 00:26:42.363 MSK -- [Trace]: Событие отправлено: { user: 3, event: 8, type: ACTION_REGISTER, timestamp: 2026-04-06T23:49:44.967022Z }
+10/04/2026 - 00:26:42.363 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 8, type: ACTION_REGISTER, timestamp: 2026-04-06T23:49:44.967022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:42.367 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 8, type: REGISTER, timestamp: 2026-04-06T23:49:44.967Z }
+10/04/2026 - 00:26:42.367 MSK -- Событие REGISTER пользователя 3 с мероприятием 8 - проверено
+--------------------------------
+10/04/2026 - 00:26:42.367 MSK -- Верификация для события закончена: { user: 3, event: 8, type: ACTION_REGISTER, timestamp: 2026-04-06T23:49:44.967022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:42.367 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:42.367 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 6, type: ACTION_REGISTER, timestamp: 2026-04-06T23:58:01.265022Z }
+10/04/2026 - 00:26:42.370 MSK -- [Trace]: Событие отправлено: { user: 4, event: 6, type: ACTION_REGISTER, timestamp: 2026-04-06T23:58:01.265022Z }
+10/04/2026 - 00:26:42.370 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 6, type: ACTION_REGISTER, timestamp: 2026-04-06T23:58:01.265022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:42.372 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 6, type: REGISTER, timestamp: 2026-04-06T23:58:01.265Z }
+10/04/2026 - 00:26:42.372 MSK -- Событие REGISTER пользователя 4 с мероприятием 6 - проверено
+--------------------------------
+10/04/2026 - 00:26:42.372 MSK -- Верификация для события закончена: { user: 4, event: 6, type: ACTION_REGISTER, timestamp: 2026-04-06T23:58:01.265022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:42.372 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:42.372 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T00:04:47.127022Z }
+10/04/2026 - 00:26:42.374 MSK -- [Trace]: Событие отправлено: { user: 4, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T00:04:47.127022Z }
+10/04/2026 - 00:26:42.374 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T00:04:47.127022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:42.875 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 2, type: REGISTER, timestamp: 2026-04-07T00:04:47.127Z }
+10/04/2026 - 00:26:42.875 MSK -- Событие REGISTER пользователя 4 с мероприятием 2 - проверено
+--------------------------------
+10/04/2026 - 00:26:42.875 MSK -- Верификация для события закончена: { user: 4, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T00:04:47.127022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:42.875 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:42.875 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T00:08:17.732022Z }
+10/04/2026 - 00:26:42.877 MSK -- [Trace]: Событие отправлено: { user: 3, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T00:08:17.732022Z }
+10/04/2026 - 00:26:42.877 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T00:08:17.732022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:42.880 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 7, type: VIEW, timestamp: 2026-04-07T00:08:17.732Z }
+10/04/2026 - 00:26:42.880 MSK -- Событие VIEW пользователя 3 с мероприятием 7 - проверено
+--------------------------------
+10/04/2026 - 00:26:42.880 MSK -- Верификация для события закончена: { user: 3, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T00:08:17.732022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:42.880 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:42.880 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T00:09:58.478022Z }
+10/04/2026 - 00:26:42.882 MSK -- [Trace]: Событие отправлено: { user: 5, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T00:09:58.478022Z }
+10/04/2026 - 00:26:42.882 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T00:09:58.478022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:43.386 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 3, type: VIEW, timestamp: 2026-04-07T00:09:58.478Z }
+10/04/2026 - 00:26:43.386 MSK -- Событие VIEW пользователя 5 с мероприятием 3 - проверено
+--------------------------------
+10/04/2026 - 00:26:43.386 MSK -- Верификация для события закончена: { user: 5, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T00:09:58.478022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:43.386 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:43.386 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T00:14:30.106022Z }
+10/04/2026 - 00:26:43.388 MSK -- [Trace]: Событие отправлено: { user: 6, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T00:14:30.106022Z }
+10/04/2026 - 00:26:43.388 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T00:14:30.106022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:43.893 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 2, type: REGISTER, timestamp: 2026-04-07T00:14:30.106Z }
+10/04/2026 - 00:26:43.893 MSK -- Событие REGISTER пользователя 6 с мероприятием 2 - проверено
+--------------------------------
+10/04/2026 - 00:26:43.893 MSK -- Верификация для события закончена: { user: 6, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T00:14:30.106022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:43.893 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:43.893 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 13, type: ACTION_REGISTER, timestamp: 2026-04-07T00:18:39.881022Z }
+10/04/2026 - 00:26:43.896 MSK -- [Trace]: Событие отправлено: { user: 6, event: 13, type: ACTION_REGISTER, timestamp: 2026-04-07T00:18:39.881022Z }
+10/04/2026 - 00:26:43.896 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 13, type: ACTION_REGISTER, timestamp: 2026-04-07T00:18:39.881022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:44.399 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 13, type: REGISTER, timestamp: 2026-04-07T00:18:39.881Z }
+10/04/2026 - 00:26:44.399 MSK -- Событие REGISTER пользователя 6 с мероприятием 13 - проверено
+--------------------------------
+10/04/2026 - 00:26:44.399 MSK -- Верификация для события закончена: { user: 6, event: 13, type: ACTION_REGISTER, timestamp: 2026-04-07T00:18:39.881022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:44.399 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:44.399 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 8, type: ACTION_REGISTER, timestamp: 2026-04-07T00:25:53.148022Z }
+10/04/2026 - 00:26:44.401 MSK -- [Trace]: Событие отправлено: { user: 1, event: 8, type: ACTION_REGISTER, timestamp: 2026-04-07T00:25:53.148022Z }
+10/04/2026 - 00:26:44.401 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 8, type: ACTION_REGISTER, timestamp: 2026-04-07T00:25:53.148022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:44.403 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 8, type: REGISTER, timestamp: 2026-04-07T00:25:53.148Z }
+10/04/2026 - 00:26:44.403 MSK -- Событие REGISTER пользователя 1 с мероприятием 8 - проверено
+--------------------------------
+10/04/2026 - 00:26:44.403 MSK -- Верификация для события закончена: { user: 1, event: 8, type: ACTION_REGISTER, timestamp: 2026-04-07T00:25:53.148022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:44.403 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:44.403 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T00:27:48.560022Z }
+10/04/2026 - 00:26:44.405 MSK -- [Trace]: Событие отправлено: { user: 4, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T00:27:48.560022Z }
+10/04/2026 - 00:26:44.405 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T00:27:48.560022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:44.909 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 7, type: VIEW, timestamp: 2026-04-07T00:27:48.560Z }
+10/04/2026 - 00:26:44.909 MSK -- Событие VIEW пользователя 4 с мероприятием 7 - проверено
+--------------------------------
+10/04/2026 - 00:26:44.909 MSK -- Верификация для события закончена: { user: 4, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T00:27:48.560022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:44.909 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:44.909 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 9, type: ACTION_VIEW, timestamp: 2026-04-07T00:35:06.263022Z }
+10/04/2026 - 00:26:44.911 MSK -- [Trace]: Событие отправлено: { user: 6, event: 9, type: ACTION_VIEW, timestamp: 2026-04-07T00:35:06.263022Z }
+10/04/2026 - 00:26:44.911 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 9, type: ACTION_VIEW, timestamp: 2026-04-07T00:35:06.263022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:44.914 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 9, type: VIEW, timestamp: 2026-04-07T00:35:06.263Z }
+10/04/2026 - 00:26:44.914 MSK -- Событие VIEW пользователя 6 с мероприятием 9 - проверено
+--------------------------------
+10/04/2026 - 00:26:44.914 MSK -- Верификация для события закончена: { user: 6, event: 9, type: ACTION_VIEW, timestamp: 2026-04-07T00:35:06.263022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:44.914 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:44.914 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-07T00:43:44.264022Z }
+10/04/2026 - 00:26:44.917 MSK -- [Trace]: Событие отправлено: { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-07T00:43:44.264022Z }
+10/04/2026 - 00:26:44.917 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-07T00:43:44.264022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:44.919 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 14, type: LIKE, timestamp: 2026-04-07T00:43:44.264Z }
+10/04/2026 - 00:26:44.919 MSK -- Событие LIKE пользователя 4 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:44.919 MSK -- Верификация для события закончена: { user: 4, event: 14, type: ACTION_LIKE, timestamp: 2026-04-07T00:43:44.264022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:44.919 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:44.919 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T00:49:50.017022Z }
+10/04/2026 - 00:26:44.922 MSK -- [Trace]: Событие отправлено: { user: 1, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T00:49:50.017022Z }
+10/04/2026 - 00:26:44.922 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T00:49:50.017022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:45.429 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 14, type: REGISTER, timestamp: 2026-04-07T00:49:50.017Z }
+10/04/2026 - 00:26:45.430 MSK -- Событие REGISTER пользователя 1 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:45.430 MSK -- Верификация для события закончена: { user: 1, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T00:49:50.017022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:45.430 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:45.430 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 11, type: ACTION_LIKE, timestamp: 2026-04-07T00:52:29.403022Z }
+10/04/2026 - 00:26:45.432 MSK -- [Trace]: Событие отправлено: { user: 6, event: 11, type: ACTION_LIKE, timestamp: 2026-04-07T00:52:29.403022Z }
+10/04/2026 - 00:26:45.432 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 11, type: ACTION_LIKE, timestamp: 2026-04-07T00:52:29.403022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:45.434 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 11, type: LIKE, timestamp: 2026-04-07T00:52:29.403Z }
+10/04/2026 - 00:26:45.435 MSK -- Событие LIKE пользователя 6 с мероприятием 11 - проверено
+--------------------------------
+10/04/2026 - 00:26:45.435 MSK -- Верификация для события закончена: { user: 6, event: 11, type: ACTION_LIKE, timestamp: 2026-04-07T00:52:29.403022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:45.435 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:45.435 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-07T01:00:36.500022Z }
+10/04/2026 - 00:26:45.436 MSK -- [Trace]: Событие отправлено: { user: 5, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-07T01:00:36.500022Z }
+10/04/2026 - 00:26:45.436 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-07T01:00:36.500022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:45.943 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 10, type: REGISTER, timestamp: 2026-04-07T01:00:36.500Z }
+10/04/2026 - 00:26:45.943 MSK -- Событие REGISTER пользователя 5 с мероприятием 10 - проверено
+--------------------------------
+10/04/2026 - 00:26:45.943 MSK -- Верификация для события закончена: { user: 5, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-07T01:00:36.500022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:45.943 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:45.943 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 7, type: ACTION_LIKE, timestamp: 2026-04-07T01:06:27.984022Z }
+10/04/2026 - 00:26:45.947 MSK -- [Trace]: Событие отправлено: { user: 5, event: 7, type: ACTION_LIKE, timestamp: 2026-04-07T01:06:27.984022Z }
+10/04/2026 - 00:26:45.947 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 7, type: ACTION_LIKE, timestamp: 2026-04-07T01:06:27.984022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:46.449 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 7, type: LIKE, timestamp: 2026-04-07T01:06:27.984Z }
+10/04/2026 - 00:26:46.449 MSK -- Событие LIKE пользователя 5 с мероприятием 7 - проверено
+--------------------------------
+10/04/2026 - 00:26:46.449 MSK -- Верификация для события закончена: { user: 5, event: 7, type: ACTION_LIKE, timestamp: 2026-04-07T01:06:27.984022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:46.449 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:46.449 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 6, type: ACTION_LIKE, timestamp: 2026-04-07T01:13:47.017022Z }
+10/04/2026 - 00:26:46.451 MSK -- [Trace]: Событие отправлено: { user: 4, event: 6, type: ACTION_LIKE, timestamp: 2026-04-07T01:13:47.017022Z }
+10/04/2026 - 00:26:46.451 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 6, type: ACTION_LIKE, timestamp: 2026-04-07T01:13:47.017022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:46.455 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 6, type: LIKE, timestamp: 2026-04-07T01:13:47.017Z }
+10/04/2026 - 00:26:46.455 MSK -- Событие LIKE пользователя 4 с мероприятием 6 - проверено
+--------------------------------
+10/04/2026 - 00:26:46.455 MSK -- Верификация для события закончена: { user: 4, event: 6, type: ACTION_LIKE, timestamp: 2026-04-07T01:13:47.017022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:46.455 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:46.455 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-07T01:17:10.094022Z }
+10/04/2026 - 00:26:46.458 MSK -- [Trace]: Событие отправлено: { user: 1, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-07T01:17:10.094022Z }
+10/04/2026 - 00:26:46.458 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-07T01:17:10.094022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:46.964 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 9, type: REGISTER, timestamp: 2026-04-07T01:17:10.094Z }
+10/04/2026 - 00:26:46.964 MSK -- Событие REGISTER пользователя 1 с мероприятием 9 - проверено
+--------------------------------
+10/04/2026 - 00:26:46.964 MSK -- Верификация для события закончена: { user: 1, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-07T01:17:10.094022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:46.964 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:46.964 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 5, type: ACTION_VIEW, timestamp: 2026-04-07T01:19:26.163022Z }
+10/04/2026 - 00:26:46.966 MSK -- [Trace]: Событие отправлено: { user: 5, event: 5, type: ACTION_VIEW, timestamp: 2026-04-07T01:19:26.163022Z }
+10/04/2026 - 00:26:46.966 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 5, type: ACTION_VIEW, timestamp: 2026-04-07T01:19:26.163022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:46.968 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 5, type: VIEW, timestamp: 2026-04-07T01:19:26.163Z }
+10/04/2026 - 00:26:46.968 MSK -- Событие VIEW пользователя 5 с мероприятием 5 - проверено
+--------------------------------
+10/04/2026 - 00:26:46.968 MSK -- Верификация для события закончена: { user: 5, event: 5, type: ACTION_VIEW, timestamp: 2026-04-07T01:19:26.163022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:46.968 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:46.968 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-07T01:28:02.054022Z }
+10/04/2026 - 00:26:46.970 MSK -- [Trace]: Событие отправлено: { user: 2, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-07T01:28:02.054022Z }
+10/04/2026 - 00:26:46.970 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-07T01:28:02.054022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:46.972 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 11, type: REGISTER, timestamp: 2026-04-07T01:28:02.054Z }
+10/04/2026 - 00:26:46.972 MSK -- Событие REGISTER пользователя 2 с мероприятием 11 - проверено
+--------------------------------
+10/04/2026 - 00:26:46.972 MSK -- Верификация для события закончена: { user: 2, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-07T01:28:02.054022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:46.972 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:46.972 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-07T01:29:03.216022Z }
+10/04/2026 - 00:26:46.975 MSK -- [Trace]: Событие отправлено: { user: 6, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-07T01:29:03.216022Z }
+10/04/2026 - 00:26:46.975 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-07T01:29:03.216022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:46.977 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 5, type: REGISTER, timestamp: 2026-04-07T01:29:03.216Z }
+10/04/2026 - 00:26:46.977 MSK -- Событие REGISTER пользователя 6 с мероприятием 5 - проверено
+--------------------------------
+10/04/2026 - 00:26:46.977 MSK -- Верификация для события закончена: { user: 6, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-07T01:29:03.216022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:46.977 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:46.977 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T01:30:57.394022Z }
+10/04/2026 - 00:26:46.980 MSK -- [Trace]: Событие отправлено: { user: 1, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T01:30:57.394022Z }
+10/04/2026 - 00:26:46.980 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T01:30:57.394022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:46.983 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 8, type: VIEW, timestamp: 2026-04-07T01:30:57.394Z }
+10/04/2026 - 00:26:46.983 MSK -- Событие VIEW пользователя 1 с мероприятием 8 - проверено
+--------------------------------
+10/04/2026 - 00:26:46.983 MSK -- Верификация для события закончена: { user: 1, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T01:30:57.394022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:46.983 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:46.983 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T01:36:56.536022Z }
+10/04/2026 - 00:26:46.985 MSK -- [Trace]: Событие отправлено: { user: 3, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T01:36:56.536022Z }
+10/04/2026 - 00:26:46.985 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T01:36:56.536022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:46.987 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 14, type: VIEW, timestamp: 2026-04-07T01:36:56.536Z }
+10/04/2026 - 00:26:46.987 MSK -- Событие VIEW пользователя 3 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:46.987 MSK -- Верификация для события закончена: { user: 3, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T01:36:56.536022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:46.987 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:46.987 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:38:37.649022Z }
+10/04/2026 - 00:26:46.989 MSK -- [Trace]: Событие отправлено: { user: 2, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:38:37.649022Z }
+10/04/2026 - 00:26:46.989 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:38:37.649022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:46.991 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 14, type: REGISTER, timestamp: 2026-04-07T01:38:37.649Z }
+10/04/2026 - 00:26:46.991 MSK -- Событие REGISTER пользователя 2 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:46.991 MSK -- Верификация для события закончена: { user: 2, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:38:37.649022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:46.991 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:46.991 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 14, type: ACTION_LIKE, timestamp: 2026-04-07T01:45:31.969022Z }
+10/04/2026 - 00:26:46.993 MSK -- [Trace]: Событие отправлено: { user: 2, event: 14, type: ACTION_LIKE, timestamp: 2026-04-07T01:45:31.969022Z }
+10/04/2026 - 00:26:46.993 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 14, type: ACTION_LIKE, timestamp: 2026-04-07T01:45:31.969022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:47.497 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 14, type: LIKE, timestamp: 2026-04-07T01:45:31.969Z }
+10/04/2026 - 00:26:47.497 MSK -- Событие LIKE пользователя 2 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:47.497 MSK -- Верификация для события закончена: { user: 2, event: 14, type: ACTION_LIKE, timestamp: 2026-04-07T01:45:31.969022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:47.497 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:47.497 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T01:46:39.671022Z }
+10/04/2026 - 00:26:47.501 MSK -- [Trace]: Событие отправлено: { user: 1, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T01:46:39.671022Z }
+10/04/2026 - 00:26:47.501 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T01:46:39.671022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:48.004 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 7, type: VIEW, timestamp: 2026-04-07T01:46:39.671Z }
+10/04/2026 - 00:26:48.004 MSK -- Событие VIEW пользователя 1 с мероприятием 7 - проверено
+--------------------------------
+10/04/2026 - 00:26:48.004 MSK -- Верификация для события закончена: { user: 1, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T01:46:39.671022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:48.004 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:48.004 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:53:25.957022Z }
+10/04/2026 - 00:26:48.006 MSK -- [Trace]: Событие отправлено: { user: 5, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:53:25.957022Z }
+10/04/2026 - 00:26:48.006 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:53:25.957022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:48.010 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 14, type: REGISTER, timestamp: 2026-04-07T01:53:25.957Z }
+10/04/2026 - 00:26:48.010 MSK -- Событие REGISTER пользователя 5 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:48.010 MSK -- Верификация для события закончена: { user: 5, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:53:25.957022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:48.010 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:48.010 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:58:04.147022Z }
+10/04/2026 - 00:26:48.011 MSK -- [Trace]: Событие отправлено: { user: 6, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:58:04.147022Z }
+10/04/2026 - 00:26:48.012 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:58:04.147022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:48.519 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 14, type: REGISTER, timestamp: 2026-04-07T01:58:04.147Z }
+10/04/2026 - 00:26:48.519 MSK -- Событие REGISTER пользователя 6 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:48.519 MSK -- Верификация для события закончена: { user: 6, event: 14, type: ACTION_REGISTER, timestamp: 2026-04-07T01:58:04.147022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:48.519 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:48.519 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 11, type: ACTION_VIEW, timestamp: 2026-04-07T02:02:01.180022Z }
+10/04/2026 - 00:26:48.522 MSK -- [Trace]: Событие отправлено: { user: 4, event: 11, type: ACTION_VIEW, timestamp: 2026-04-07T02:02:01.180022Z }
+10/04/2026 - 00:26:48.522 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 11, type: ACTION_VIEW, timestamp: 2026-04-07T02:02:01.180022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:48.525 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 11, type: VIEW, timestamp: 2026-04-07T02:02:01.180Z }
+10/04/2026 - 00:26:48.526 MSK -- Событие VIEW пользователя 4 с мероприятием 11 - проверено
+--------------------------------
+10/04/2026 - 00:26:48.526 MSK -- Верификация для события закончена: { user: 4, event: 11, type: ACTION_VIEW, timestamp: 2026-04-07T02:02:01.180022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:48.526 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:48.526 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T02:11:39.484022Z }
+10/04/2026 - 00:26:48.528 MSK -- [Trace]: Событие отправлено: { user: 5, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T02:11:39.484022Z }
+10/04/2026 - 00:26:48.528 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T02:11:39.484022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:48.532 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 3, type: VIEW, timestamp: 2026-04-07T02:11:39.484Z }
+10/04/2026 - 00:26:48.532 MSK -- Событие VIEW пользователя 5 с мероприятием 3 - проверено
+--------------------------------
+10/04/2026 - 00:26:48.532 MSK -- Верификация для события закончена: { user: 5, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T02:11:39.484022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:48.532 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:48.532 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T02:14:19.070022Z }
+10/04/2026 - 00:26:48.534 MSK -- [Trace]: Событие отправлено: { user: 1, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T02:14:19.070022Z }
+10/04/2026 - 00:26:48.534 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T02:14:19.070022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:48.535 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 14, type: VIEW, timestamp: 2026-04-07T02:14:19.070Z }
+10/04/2026 - 00:26:48.535 MSK -- Событие VIEW пользователя 1 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:48.535 MSK -- Верификация для события закончена: { user: 1, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T02:14:19.070022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:48.535 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:48.535 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 1, type: ACTION_VIEW, timestamp: 2026-04-07T02:16:05.765022Z }
+10/04/2026 - 00:26:48.537 MSK -- [Trace]: Событие отправлено: { user: 2, event: 1, type: ACTION_VIEW, timestamp: 2026-04-07T02:16:05.765022Z }
+10/04/2026 - 00:26:48.537 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 1, type: ACTION_VIEW, timestamp: 2026-04-07T02:16:05.765022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:49.044 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 1, type: VIEW, timestamp: 2026-04-07T02:16:05.765Z }
+10/04/2026 - 00:26:49.044 MSK -- Событие VIEW пользователя 2 с мероприятием 1 - проверено
+--------------------------------
+10/04/2026 - 00:26:49.044 MSK -- Верификация для события закончена: { user: 2, event: 1, type: ACTION_VIEW, timestamp: 2026-04-07T02:16:05.765022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:49.044 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:49.044 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 12, type: ACTION_VIEW, timestamp: 2026-04-07T02:22:20.459022Z }
+10/04/2026 - 00:26:49.048 MSK -- [Trace]: Событие отправлено: { user: 4, event: 12, type: ACTION_VIEW, timestamp: 2026-04-07T02:22:20.459022Z }
+10/04/2026 - 00:26:49.048 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 12, type: ACTION_VIEW, timestamp: 2026-04-07T02:22:20.459022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:49.549 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 12, type: VIEW, timestamp: 2026-04-07T02:22:20.459Z }
+10/04/2026 - 00:26:49.549 MSK -- Событие VIEW пользователя 4 с мероприятием 12 - проверено
+--------------------------------
+10/04/2026 - 00:26:49.549 MSK -- Верификация для события закончена: { user: 4, event: 12, type: ACTION_VIEW, timestamp: 2026-04-07T02:22:20.459022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:49.549 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:49.549 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T02:25:50.092022Z }
+10/04/2026 - 00:26:49.551 MSK -- [Trace]: Событие отправлено: { user: 3, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T02:25:50.092022Z }
+10/04/2026 - 00:26:49.551 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T02:25:50.092022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:49.554 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 3, type: VIEW, timestamp: 2026-04-07T02:25:50.092Z }
+10/04/2026 - 00:26:49.554 MSK -- Событие VIEW пользователя 3 с мероприятием 3 - проверено
+--------------------------------
+10/04/2026 - 00:26:49.554 MSK -- Верификация для события закончена: { user: 3, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T02:25:50.092022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:49.554 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:49.554 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T02:33:52.937022Z }
+10/04/2026 - 00:26:49.557 MSK -- [Trace]: Событие отправлено: { user: 2, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T02:33:52.937022Z }
+10/04/2026 - 00:26:49.557 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T02:33:52.937022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:49.560 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 2, type: REGISTER, timestamp: 2026-04-07T02:33:52.937Z }
+10/04/2026 - 00:26:49.560 MSK -- Событие REGISTER пользователя 2 с мероприятием 2 - проверено
+--------------------------------
+10/04/2026 - 00:26:49.560 MSK -- Верификация для события закончена: { user: 2, event: 2, type: ACTION_REGISTER, timestamp: 2026-04-07T02:33:52.937022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:49.560 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:49.560 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 8, type: ACTION_LIKE, timestamp: 2026-04-07T02:35:33.353022Z }
+10/04/2026 - 00:26:49.563 MSK -- [Trace]: Событие отправлено: { user: 1, event: 8, type: ACTION_LIKE, timestamp: 2026-04-07T02:35:33.353022Z }
+10/04/2026 - 00:26:49.563 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 8, type: ACTION_LIKE, timestamp: 2026-04-07T02:35:33.353022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:50.066 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 8, type: LIKE, timestamp: 2026-04-07T02:35:33.353Z }
+10/04/2026 - 00:26:50.066 MSK -- Событие LIKE пользователя 1 с мероприятием 8 - проверено
+--------------------------------
+10/04/2026 - 00:26:50.066 MSK -- Верификация для события закончена: { user: 1, event: 8, type: ACTION_LIKE, timestamp: 2026-04-07T02:35:33.353022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:50.066 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:50.066 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-07T02:44:18.670022Z }
+10/04/2026 - 00:26:50.068 MSK -- [Trace]: Событие отправлено: { user: 3, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-07T02:44:18.670022Z }
+10/04/2026 - 00:26:50.068 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-07T02:44:18.670022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:50.072 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 11, type: REGISTER, timestamp: 2026-04-07T02:44:18.670Z }
+10/04/2026 - 00:26:50.072 MSK -- Событие REGISTER пользователя 3 с мероприятием 11 - проверено
+--------------------------------
+10/04/2026 - 00:26:50.072 MSK -- Верификация для события закончена: { user: 3, event: 11, type: ACTION_REGISTER, timestamp: 2026-04-07T02:44:18.670022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:50.072 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:50.072 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 8, type: ACTION_LIKE, timestamp: 2026-04-07T02:47:44.337022Z }
+10/04/2026 - 00:26:50.075 MSK -- [Trace]: Событие отправлено: { user: 3, event: 8, type: ACTION_LIKE, timestamp: 2026-04-07T02:47:44.337022Z }
+10/04/2026 - 00:26:50.075 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 8, type: ACTION_LIKE, timestamp: 2026-04-07T02:47:44.337022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:50.579 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 8, type: LIKE, timestamp: 2026-04-07T02:47:44.337Z }
+10/04/2026 - 00:26:50.579 MSK -- Событие LIKE пользователя 3 с мероприятием 8 - проверено
+--------------------------------
+10/04/2026 - 00:26:50.579 MSK -- Верификация для события закончена: { user: 3, event: 8, type: ACTION_LIKE, timestamp: 2026-04-07T02:47:44.337022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:50.579 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:50.579 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-07T02:55:18.441022Z }
+10/04/2026 - 00:26:50.581 MSK -- [Trace]: Событие отправлено: { user: 5, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-07T02:55:18.441022Z }
+10/04/2026 - 00:26:50.581 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-07T02:55:18.441022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:51.085 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 1, type: REGISTER, timestamp: 2026-04-07T02:55:18.441Z }
+10/04/2026 - 00:26:51.085 MSK -- Событие REGISTER пользователя 5 с мероприятием 1 - проверено
+--------------------------------
+10/04/2026 - 00:26:51.085 MSK -- Верификация для события закончена: { user: 5, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-07T02:55:18.441022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:51.085 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:51.085 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T02:58:52.524022Z }
+10/04/2026 - 00:26:51.087 MSK -- [Trace]: Событие отправлено: { user: 1, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T02:58:52.524022Z }
+10/04/2026 - 00:26:51.087 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T02:58:52.524022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:51.091 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 8, type: VIEW, timestamp: 2026-04-07T02:58:52.524Z }
+10/04/2026 - 00:26:51.091 MSK -- Событие VIEW пользователя 1 с мероприятием 8 - проверено
+--------------------------------
+10/04/2026 - 00:26:51.091 MSK -- Верификация для события закончена: { user: 1, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T02:58:52.524022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:51.091 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:51.091 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 2, type: ACTION_VIEW, timestamp: 2026-04-07T03:03:37.980022Z }
+10/04/2026 - 00:26:51.093 MSK -- [Trace]: Событие отправлено: { user: 1, event: 2, type: ACTION_VIEW, timestamp: 2026-04-07T03:03:37.980022Z }
+10/04/2026 - 00:26:51.093 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 2, type: ACTION_VIEW, timestamp: 2026-04-07T03:03:37.980022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:51.595 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 2, type: VIEW, timestamp: 2026-04-07T03:03:37.980Z }
+10/04/2026 - 00:26:51.595 MSK -- Событие VIEW пользователя 1 с мероприятием 2 - проверено
+--------------------------------
+10/04/2026 - 00:26:51.595 MSK -- Верификация для события закончена: { user: 1, event: 2, type: ACTION_VIEW, timestamp: 2026-04-07T03:03:37.980022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:51.595 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:51.595 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 10, type: ACTION_VIEW, timestamp: 2026-04-07T03:07:41.751022Z }
+10/04/2026 - 00:26:51.597 MSK -- [Trace]: Событие отправлено: { user: 3, event: 10, type: ACTION_VIEW, timestamp: 2026-04-07T03:07:41.751022Z }
+10/04/2026 - 00:26:51.597 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 10, type: ACTION_VIEW, timestamp: 2026-04-07T03:07:41.751022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:51.600 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 10, type: VIEW, timestamp: 2026-04-07T03:07:41.751Z }
+10/04/2026 - 00:26:51.600 MSK -- Событие VIEW пользователя 3 с мероприятием 10 - проверено
+--------------------------------
+10/04/2026 - 00:26:51.600 MSK -- Верификация для события закончена: { user: 3, event: 10, type: ACTION_VIEW, timestamp: 2026-04-07T03:07:41.751022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:51.600 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:51.600 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 4, type: ACTION_VIEW, timestamp: 2026-04-07T03:11:36.645022Z }
+10/04/2026 - 00:26:51.601 MSK -- [Trace]: Событие отправлено: { user: 5, event: 4, type: ACTION_VIEW, timestamp: 2026-04-07T03:11:36.645022Z }
+10/04/2026 - 00:26:51.601 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 4, type: ACTION_VIEW, timestamp: 2026-04-07T03:11:36.645022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:52.109 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 4, type: VIEW, timestamp: 2026-04-07T03:11:36.645Z }
+10/04/2026 - 00:26:52.109 MSK -- Событие VIEW пользователя 5 с мероприятием 4 - проверено
+--------------------------------
+10/04/2026 - 00:26:52.109 MSK -- Верификация для события закончена: { user: 5, event: 4, type: ACTION_VIEW, timestamp: 2026-04-07T03:11:36.645022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:52.109 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:52.109 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T03:15:14.355022Z }
+10/04/2026 - 00:26:52.116 MSK -- [Trace]: Событие отправлено: { user: 2, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T03:15:14.355022Z }
+10/04/2026 - 00:26:52.116 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T03:15:14.355022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:52.118 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 6, type: VIEW, timestamp: 2026-04-07T03:15:14.355Z }
+10/04/2026 - 00:26:52.118 MSK -- Событие VIEW пользователя 2 с мероприятием 6 - проверено
+--------------------------------
+10/04/2026 - 00:26:52.118 MSK -- Верификация для события закончена: { user: 2, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T03:15:14.355022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:52.118 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:52.118 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 9, type: ACTION_VIEW, timestamp: 2026-04-07T03:16:46.094022Z }
+10/04/2026 - 00:26:52.120 MSK -- [Trace]: Событие отправлено: { user: 3, event: 9, type: ACTION_VIEW, timestamp: 2026-04-07T03:16:46.094022Z }
+10/04/2026 - 00:26:52.120 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 9, type: ACTION_VIEW, timestamp: 2026-04-07T03:16:46.094022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:52.122 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 9, type: VIEW, timestamp: 2026-04-07T03:16:46.094Z }
+10/04/2026 - 00:26:52.122 MSK -- Событие VIEW пользователя 3 с мероприятием 9 - проверено
+--------------------------------
+10/04/2026 - 00:26:52.122 MSK -- Верификация для события закончена: { user: 3, event: 9, type: ACTION_VIEW, timestamp: 2026-04-07T03:16:46.094022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:52.122 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:52.122 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 13, type: ACTION_LIKE, timestamp: 2026-04-07T03:26:27.762022Z }
+10/04/2026 - 00:26:52.124 MSK -- [Trace]: Событие отправлено: { user: 6, event: 13, type: ACTION_LIKE, timestamp: 2026-04-07T03:26:27.762022Z }
+10/04/2026 - 00:26:52.124 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 13, type: ACTION_LIKE, timestamp: 2026-04-07T03:26:27.762022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:52.630 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 13, type: LIKE, timestamp: 2026-04-07T03:26:27.762Z }
+10/04/2026 - 00:26:52.630 MSK -- Событие LIKE пользователя 6 с мероприятием 13 - проверено
+--------------------------------
+10/04/2026 - 00:26:52.630 MSK -- Верификация для события закончена: { user: 6, event: 13, type: ACTION_LIKE, timestamp: 2026-04-07T03:26:27.762022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:52.630 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:52.630 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T03:35:31.766022Z }
+10/04/2026 - 00:26:52.633 MSK -- [Trace]: Событие отправлено: { user: 1, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T03:35:31.766022Z }
+10/04/2026 - 00:26:52.633 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T03:35:31.766022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:52.635 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 3, type: VIEW, timestamp: 2026-04-07T03:35:31.766Z }
+10/04/2026 - 00:26:52.635 MSK -- Событие VIEW пользователя 1 с мероприятием 3 - проверено
+--------------------------------
+10/04/2026 - 00:26:52.635 MSK -- Верификация для события закончена: { user: 1, event: 3, type: ACTION_VIEW, timestamp: 2026-04-07T03:35:31.766022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:52.635 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:52.635 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-07T03:39:52.763022Z }
+10/04/2026 - 00:26:52.637 MSK -- [Trace]: Событие отправлено: { user: 6, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-07T03:39:52.763022Z }
+10/04/2026 - 00:26:52.637 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-07T03:39:52.763022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:52.639 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 9, type: REGISTER, timestamp: 2026-04-07T03:39:52.763Z }
+10/04/2026 - 00:26:52.639 MSK -- Событие REGISTER пользователя 6 с мероприятием 9 - проверено
+--------------------------------
+10/04/2026 - 00:26:52.639 MSK -- Верификация для события закончена: { user: 6, event: 9, type: ACTION_REGISTER, timestamp: 2026-04-07T03:39:52.763022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:52.639 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:52.639 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-07T03:44:51.185022Z }
+10/04/2026 - 00:26:52.641 MSK -- [Trace]: Событие отправлено: { user: 1, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-07T03:44:51.185022Z }
+10/04/2026 - 00:26:52.641 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-07T03:44:51.185022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:52.642 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 5, type: REGISTER, timestamp: 2026-04-07T03:44:51.185Z }
+10/04/2026 - 00:26:52.642 MSK -- Событие REGISTER пользователя 1 с мероприятием 5 - проверено
+--------------------------------
+10/04/2026 - 00:26:52.642 MSK -- Верификация для события закончена: { user: 1, event: 5, type: ACTION_REGISTER, timestamp: 2026-04-07T03:44:51.185022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:52.642 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:52.642 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 5, type: ACTION_VIEW, timestamp: 2026-04-07T03:50:07.243022Z }
+10/04/2026 - 00:26:52.644 MSK -- [Trace]: Событие отправлено: { user: 5, event: 5, type: ACTION_VIEW, timestamp: 2026-04-07T03:50:07.243022Z }
+10/04/2026 - 00:26:52.644 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 5, type: ACTION_VIEW, timestamp: 2026-04-07T03:50:07.243022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:52.645 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 5, type: VIEW, timestamp: 2026-04-07T03:50:07.243Z }
+10/04/2026 - 00:26:52.645 MSK -- Событие VIEW пользователя 5 с мероприятием 5 - проверено
+--------------------------------
+10/04/2026 - 00:26:52.645 MSK -- Верификация для события закончена: { user: 5, event: 5, type: ACTION_VIEW, timestamp: 2026-04-07T03:50:07.243022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:52.645 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:52.645 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T03:55:53.423022Z }
+10/04/2026 - 00:26:52.647 MSK -- [Trace]: Событие отправлено: { user: 5, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T03:55:53.423022Z }
+10/04/2026 - 00:26:52.647 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T03:55:53.423022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:53.151 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 8, type: VIEW, timestamp: 2026-04-07T03:55:53.423Z }
+10/04/2026 - 00:26:53.151 MSK -- Событие VIEW пользователя 5 с мероприятием 8 - проверено
+--------------------------------
+10/04/2026 - 00:26:53.151 MSK -- Верификация для события закончена: { user: 5, event: 8, type: ACTION_VIEW, timestamp: 2026-04-07T03:55:53.423022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:53.151 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:53.151 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T03:57:00.089022Z }
+10/04/2026 - 00:26:53.153 MSK -- [Trace]: Событие отправлено: { user: 6, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T03:57:00.089022Z }
+10/04/2026 - 00:26:53.153 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T03:57:00.089022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:53.658 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 7, type: VIEW, timestamp: 2026-04-07T03:57:00.089Z }
+10/04/2026 - 00:26:53.658 MSK -- Событие VIEW пользователя 6 с мероприятием 7 - проверено
+--------------------------------
+10/04/2026 - 00:26:53.658 MSK -- Верификация для события закончена: { user: 6, event: 7, type: ACTION_VIEW, timestamp: 2026-04-07T03:57:00.089022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:53.658 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:53.658 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T03:59:55.532022Z }
+10/04/2026 - 00:26:53.660 MSK -- [Trace]: Событие отправлено: { user: 3, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T03:59:55.532022Z }
+10/04/2026 - 00:26:53.660 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T03:59:55.532022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:54.163 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 6, type: VIEW, timestamp: 2026-04-07T03:59:55.532Z }
+10/04/2026 - 00:26:54.163 MSK -- Событие VIEW пользователя 3 с мероприятием 6 - проверено
+--------------------------------
+10/04/2026 - 00:26:54.163 MSK -- Верификация для события закончена: { user: 3, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T03:59:55.532022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:54.163 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:54.163 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T04:05:13.172022Z }
+10/04/2026 - 00:26:54.165 MSK -- [Trace]: Событие отправлено: { user: 1, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T04:05:13.172022Z }
+10/04/2026 - 00:26:54.165 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T04:05:13.172022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:54.167 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 6, type: VIEW, timestamp: 2026-04-07T04:05:13.172Z }
+10/04/2026 - 00:26:54.167 MSK -- Событие VIEW пользователя 1 с мероприятием 6 - проверено
+--------------------------------
+10/04/2026 - 00:26:54.167 MSK -- Верификация для события закончена: { user: 1, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T04:05:13.172022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:54.167 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:54.167 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 5, type: ACTION_LIKE, timestamp: 2026-04-07T04:09:43.326022Z }
+10/04/2026 - 00:26:54.170 MSK -- [Trace]: Событие отправлено: { user: 2, event: 5, type: ACTION_LIKE, timestamp: 2026-04-07T04:09:43.326022Z }
+10/04/2026 - 00:26:54.170 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 5, type: ACTION_LIKE, timestamp: 2026-04-07T04:09:43.326022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:54.676 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 5, type: LIKE, timestamp: 2026-04-07T04:09:43.326Z }
+10/04/2026 - 00:26:54.676 MSK -- Событие LIKE пользователя 2 с мероприятием 5 - проверено
+--------------------------------
+10/04/2026 - 00:26:54.676 MSK -- Верификация для события закончена: { user: 2, event: 5, type: ACTION_LIKE, timestamp: 2026-04-07T04:09:43.326022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:54.676 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:54.676 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-07T04:17:45.841022Z }
+10/04/2026 - 00:26:54.678 MSK -- [Trace]: Событие отправлено: { user: 3, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-07T04:17:45.841022Z }
+10/04/2026 - 00:26:54.678 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-07T04:17:45.841022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:54.681 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 1, type: REGISTER, timestamp: 2026-04-07T04:17:45.841Z }
+10/04/2026 - 00:26:54.681 MSK -- Событие REGISTER пользователя 3 с мероприятием 1 - проверено
+--------------------------------
+10/04/2026 - 00:26:54.681 MSK -- Верификация для события закончена: { user: 3, event: 1, type: ACTION_REGISTER, timestamp: 2026-04-07T04:17:45.841022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:54.681 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:54.681 MSK -- Отправляю событие о действии пользователя: { user: 5, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T04:22:20.713022Z }
+10/04/2026 - 00:26:54.683 MSK -- [Trace]: Событие отправлено: { user: 5, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T04:22:20.713022Z }
+10/04/2026 - 00:26:54.683 MSK -- Ожидаю 10 секунд получения события { user: 5, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T04:22:20.713022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:55.186 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 5, event: 14, type: VIEW, timestamp: 2026-04-07T04:22:20.713Z }
+10/04/2026 - 00:26:55.186 MSK -- Событие VIEW пользователя 5 с мероприятием 14 - проверено
+--------------------------------
+10/04/2026 - 00:26:55.186 MSK -- Верификация для события закончена: { user: 5, event: 14, type: ACTION_VIEW, timestamp: 2026-04-07T04:22:20.713022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:55.186 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:55.186 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 2, type: ACTION_LIKE, timestamp: 2026-04-07T04:23:52.361022Z }
+10/04/2026 - 00:26:55.189 MSK -- [Trace]: Событие отправлено: { user: 2, event: 2, type: ACTION_LIKE, timestamp: 2026-04-07T04:23:52.361022Z }
+10/04/2026 - 00:26:55.189 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 2, type: ACTION_LIKE, timestamp: 2026-04-07T04:23:52.361022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:55.194 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 2, type: LIKE, timestamp: 2026-04-07T04:23:52.361Z }
+10/04/2026 - 00:26:55.194 MSK -- Событие LIKE пользователя 2 с мероприятием 2 - проверено
+--------------------------------
+10/04/2026 - 00:26:55.194 MSK -- Верификация для события закончена: { user: 2, event: 2, type: ACTION_LIKE, timestamp: 2026-04-07T04:23:52.361022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:55.194 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:55.194 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 10, type: ACTION_VIEW, timestamp: 2026-04-07T04:30:58.070022Z }
+10/04/2026 - 00:26:55.196 MSK -- [Trace]: Событие отправлено: { user: 2, event: 10, type: ACTION_VIEW, timestamp: 2026-04-07T04:30:58.070022Z }
+10/04/2026 - 00:26:55.196 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 10, type: ACTION_VIEW, timestamp: 2026-04-07T04:30:58.070022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:55.705 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 10, type: VIEW, timestamp: 2026-04-07T04:30:58.070Z }
+10/04/2026 - 00:26:55.705 MSK -- Событие VIEW пользователя 2 с мероприятием 10 - проверено
+--------------------------------
+10/04/2026 - 00:26:55.705 MSK -- Верификация для события закончена: { user: 2, event: 10, type: ACTION_VIEW, timestamp: 2026-04-07T04:30:58.070022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:55.705 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:55.705 MSK -- Отправляю событие о действии пользователя: { user: 1, event: 12, type: ACTION_REGISTER, timestamp: 2026-04-07T04:38:26.616022Z }
+10/04/2026 - 00:26:55.708 MSK -- [Trace]: Событие отправлено: { user: 1, event: 12, type: ACTION_REGISTER, timestamp: 2026-04-07T04:38:26.616022Z }
+10/04/2026 - 00:26:55.708 MSK -- Ожидаю 10 секунд получения события { user: 1, event: 12, type: ACTION_REGISTER, timestamp: 2026-04-07T04:38:26.616022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:56.211 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 1, event: 12, type: REGISTER, timestamp: 2026-04-07T04:38:26.616Z }
+10/04/2026 - 00:26:56.211 MSK -- Событие REGISTER пользователя 1 с мероприятием 12 - проверено
+--------------------------------
+10/04/2026 - 00:26:56.211 MSK -- Верификация для события закончена: { user: 1, event: 12, type: ACTION_REGISTER, timestamp: 2026-04-07T04:38:26.616022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:56.211 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:56.211 MSK -- Отправляю событие о действии пользователя: { user: 4, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T04:44:07.662022Z }
+10/04/2026 - 00:26:56.213 MSK -- [Trace]: Событие отправлено: { user: 4, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T04:44:07.662022Z }
+10/04/2026 - 00:26:56.213 MSK -- Ожидаю 10 секунд получения события { user: 4, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T04:44:07.662022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:56.719 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 4, event: 6, type: VIEW, timestamp: 2026-04-07T04:44:07.662Z }
+10/04/2026 - 00:26:56.719 MSK -- Событие VIEW пользователя 4 с мероприятием 6 - проверено
+--------------------------------
+10/04/2026 - 00:26:56.719 MSK -- Верификация для события закончена: { user: 4, event: 6, type: ACTION_VIEW, timestamp: 2026-04-07T04:44:07.662022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:56.719 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:56.719 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 1, type: ACTION_VIEW, timestamp: 2026-04-07T04:49:12.423022Z }
+10/04/2026 - 00:26:56.721 MSK -- [Trace]: Событие отправлено: { user: 2, event: 1, type: ACTION_VIEW, timestamp: 2026-04-07T04:49:12.423022Z }
+10/04/2026 - 00:26:56.721 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 1, type: ACTION_VIEW, timestamp: 2026-04-07T04:49:12.423022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:57.226 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 1, type: VIEW, timestamp: 2026-04-07T04:49:12.423Z }
+10/04/2026 - 00:26:57.226 MSK -- Событие VIEW пользователя 2 с мероприятием 1 - проверено
+--------------------------------
+10/04/2026 - 00:26:57.226 MSK -- Верификация для события закончена: { user: 2, event: 1, type: ACTION_VIEW, timestamp: 2026-04-07T04:49:12.423022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:57.226 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:57.226 MSK -- Отправляю событие о действии пользователя: { user: 6, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-07T04:59:08.367022Z }
+10/04/2026 - 00:26:57.228 MSK -- [Trace]: Событие отправлено: { user: 6, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-07T04:59:08.367022Z }
+10/04/2026 - 00:26:57.228 MSK -- Ожидаю 10 секунд получения события { user: 6, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-07T04:59:08.367022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:57.230 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 6, event: 10, type: REGISTER, timestamp: 2026-04-07T04:59:08.367Z }
+10/04/2026 - 00:26:57.230 MSK -- Событие REGISTER пользователя 6 с мероприятием 10 - проверено
+--------------------------------
+10/04/2026 - 00:26:57.230 MSK -- Верификация для события закончена: { user: 6, event: 10, type: ACTION_REGISTER, timestamp: 2026-04-07T04:59:08.367022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:57.230 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:57.230 MSK -- Отправляю событие о действии пользователя: { user: 2, event: 4, type: ACTION_REGISTER, timestamp: 2026-04-07T05:01:03.730022Z }
+10/04/2026 - 00:26:57.233 MSK -- [Trace]: Событие отправлено: { user: 2, event: 4, type: ACTION_REGISTER, timestamp: 2026-04-07T05:01:03.730022Z }
+10/04/2026 - 00:26:57.233 MSK -- Ожидаю 10 секунд получения события { user: 2, event: 4, type: ACTION_REGISTER, timestamp: 2026-04-07T05:01:03.730022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:57.234 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 2, event: 4, type: REGISTER, timestamp: 2026-04-07T05:01:03.730Z }
+10/04/2026 - 00:26:57.234 MSK -- Событие REGISTER пользователя 2 с мероприятием 4 - проверено
+--------------------------------
+10/04/2026 - 00:26:57.234 MSK -- Верификация для события закончена: { user: 2, event: 4, type: ACTION_REGISTER, timestamp: 2026-04-07T05:01:03.730022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:57.234 MSK -- Начинаю верификацию сервиса Collector
+10/04/2026 - 00:26:57.234 MSK -- Отправляю событие о действии пользователя: { user: 3, event: 4, type: ACTION_VIEW, timestamp: 2026-04-07T05:07:58.079022Z }
+10/04/2026 - 00:26:57.236 MSK -- [Trace]: Событие отправлено: { user: 3, event: 4, type: ACTION_VIEW, timestamp: 2026-04-07T05:07:58.079022Z }
+10/04/2026 - 00:26:57.236 MSK -- Ожидаю 10 секунд получения события { user: 3, event: 4, type: ACTION_VIEW, timestamp: 2026-04-07T05:07:58.079022Z } из топика stats.user-actions.tester.collection.20260410_0024
+10/04/2026 - 00:26:57.239 MSK -- [Trace]: Начинаю верификацию полученного события: { user: 3, event: 4, type: VIEW, timestamp: 2026-04-07T05:07:58.079Z }
+10/04/2026 - 00:26:57.239 MSK -- Событие VIEW пользователя 3 с мероприятием 4 - проверено
+--------------------------------
+10/04/2026 - 00:26:57.239 MSK -- Верификация для события закончена: { user: 3, event: 4, type: ACTION_VIEW, timestamp: 2026-04-07T05:07:58.079022Z }
+--------------------------------
+--------------------------------
+10/04/2026 - 00:26:57.239 MSK -- Завершаю работу приложения
+--------------------------------
+Обнаружено 0 ошибок.

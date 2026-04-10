@@ -32,8 +32,7 @@ public interface EventMapper {
         event.setCreatedOn(LocalDateTime.now());
         event.setState(StateEvent.PENDING);
         event.setConfirmedRequests(0L);
-        event.setViews(0L);
-        event.setRating(0L);
+        event.setRating(0.0);
     }
 
     @Mapping(target = "initiator", expression = "java(toUserShortDto(event))")

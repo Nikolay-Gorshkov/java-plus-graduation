@@ -1,156 +1,99 @@
 package ru.korshunov.statsclient;
 
-import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.retry.backoff.FixedBackOffPolicy;
-import org.springframework.retry.policy.MaxAttemptsRetryPolicy;
-import org.springframework.retry.support.RetryTemplate;
+import com.google.protobuf.Timestamp;
+import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClient;
-import org.springframework.web.util.UriComponentsBuilder;
-import statsdto.HitDto;
-import statsdto.StatDto;
+import stats.service.collector.ActionTypeProto;
+import stats.service.collector.UserActionControllerGrpc;
+import stats.service.collector.UserActionProto;
+import stats.service.dashboard.InteractionsCountRequestProto;
+import stats.service.dashboard.RecommendationsControllerGrpc;
+import stats.service.dashboard.RecommendedEventProto;
+import stats.service.dashboard.SimilarEventsRequestProto;
+import stats.service.dashboard.UserPredictionsRequestProto;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.time.Instant;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 public class StatsClientImpl implements StatsClient {
 
-    private final RestClient restClient;
-    private final DiscoveryClient discoveryClient;
-    private final RetryTemplate retryTemplate;
-    private final String statsServiceId;
-    private static final String PATH_HIT = "/hit";
-    private static final String PATH_STATS = "/stats";
-    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    @GrpcClient("collector")
+    private UserActionControllerGrpc.UserActionControllerBlockingStub collectorClient;
 
-    public StatsClientImpl(@Value("${stats-client.service-id:stats-server}") String statsServiceId,
-                           RestClient.Builder restClientBuilder,
-                           DiscoveryClient discoveryClient) {
-        this.restClient = restClientBuilder.build();
-        this.discoveryClient = discoveryClient;
-        this.statsServiceId = statsServiceId;
-        this.retryTemplate = createRetryTemplate();
+    @GrpcClient("analyzer")
+    private RecommendationsControllerGrpc.RecommendationsControllerBlockingStub analyzerClient;
+
+    @Override
+    public void collectUserAction(long userId, long eventId, ActionType actionType) {
+        Instant now = Instant.now();
+        Timestamp timestamp = Timestamp.newBuilder()
+                .setSeconds(now.getEpochSecond())
+                .setNanos(now.getNano())
+                .build();
+
+        UserActionProto request = UserActionProto.newBuilder()
+                .setUserId(userId)
+                .setEventId(eventId)
+                .setActionType(toProto(actionType))
+                .setTimestamp(timestamp)
+                .build();
+
+        collectorClient.collectUserAction(request);
     }
 
     @Override
-    public void addHit(@Valid HitDto hitDto) {
-        String uri = UriComponentsBuilder
-                .fromPath(PATH_HIT)
-                .build()
-                .toUriString();
-
-        post(uri, hitDto);
-    }
-
-    private ResponseEntity<Void> post(String uri, Object body) {
-        return restClient
-                .post()
-                .uri(makeUri(uri))
-                .contentType(MediaType.APPLICATION_JSON)
-                .body(body)
-                .retrieve()
-                .toBodilessEntity();
+    public List<RecommendedEvent> getRecommendationsForUser(long userId, int maxResults) {
+        UserPredictionsRequestProto request = UserPredictionsRequestProto.newBuilder()
+                .setUserId(userId)
+                .setMaxResults(maxResults)
+                .build();
+        return asStream(analyzerClient.getRecommendationsForUser(request))
+                .map(this::toRecommendedEvent)
+                .toList();
     }
 
     @Override
-    public List<StatDto> getStats(LocalDateTime start, LocalDateTime end) {
-        String uri = UriComponentsBuilder
-                .fromPath(PATH_STATS)
-                .queryParam("start", start.format(FORMATTER))
-                .queryParam("end", end.format(FORMATTER))
-                .build()
-                .encode()
-                .toUriString();
-
-        return get(uri);
-    }
-
-    private List<StatDto> get(String uri) {
-        return restClient
-                .get()
-                .uri(makeUri(uri))
-                .accept(MediaType.APPLICATION_JSON)
-                .retrieve()
-                .body(new ParameterizedTypeReference<List<StatDto>>() {
-                });
+    public List<RecommendedEvent> getSimilarEvents(long eventId, long userId, int maxResults) {
+        SimilarEventsRequestProto request = SimilarEventsRequestProto.newBuilder()
+                .setEventId(eventId)
+                .setUserId(userId)
+                .setMaxResults(maxResults)
+                .build();
+        return asStream(analyzerClient.getSimilarEvents(request))
+                .map(this::toRecommendedEvent)
+                .toList();
     }
 
     @Override
-    public List<StatDto> getStats(LocalDateTime start, LocalDateTime end, List<String> uris) {
-        String uri = UriComponentsBuilder
-                .fromPath(PATH_STATS)
-                .queryParam("start", start.format(FORMATTER))
-                .queryParam("end", end.format(FORMATTER))
-                .queryParam("uris", uris.toArray())
-                .build()
-                .encode()
-                .toUriString();
-
-        return get(uri);
+    public Map<Long, Double> getInteractionsCount(List<Long> eventIds) {
+        InteractionsCountRequestProto request = InteractionsCountRequestProto.newBuilder()
+                .addAllEventId(eventIds)
+                .build();
+        return asStream(analyzerClient.getInteractionsCount(request))
+                .collect(Collectors.toMap(RecommendedEventProto::getEventId, RecommendedEventProto::getScore));
     }
 
-    @Override
-    public List<StatDto> getStats(LocalDateTime start, LocalDateTime end, Boolean unique) {
-        String uri = UriComponentsBuilder
-                .fromPath(PATH_STATS)
-                .queryParam("start", start.format(FORMATTER))
-                .queryParam("end", end.format(FORMATTER))
-                .queryParam("unique", unique)
-                .build()
-                .encode()
-                .toUriString();
-
-        return get(uri);
+    private ActionTypeProto toProto(ActionType actionType) {
+        return switch (actionType) {
+            case VIEW -> ActionTypeProto.ACTION_VIEW;
+            case REGISTER -> ActionTypeProto.ACTION_REGISTER;
+            case LIKE -> ActionTypeProto.ACTION_LIKE;
+        };
     }
 
-    @Override
-    public List<StatDto> getStats(LocalDateTime start, LocalDateTime end, List<String> uris, Boolean unique) {
-        String uri = UriComponentsBuilder
-                .fromPath(PATH_STATS)
-                .queryParam("start", start.format(FORMATTER))
-                .queryParam("end", end.format(FORMATTER))
-                .queryParam("uris", uris.toArray())
-                .queryParam("unique", unique)
-                .build()
-                .encode()
-                .toUriString();
-
-        return get(uri);
+    private RecommendedEvent toRecommendedEvent(RecommendedEventProto proto) {
+        return new RecommendedEvent(proto.getEventId(), proto.getScore());
     }
 
-    private RetryTemplate createRetryTemplate() {
-        RetryTemplate template = new RetryTemplate();
-
-        FixedBackOffPolicy backOffPolicy = new FixedBackOffPolicy();
-        backOffPolicy.setBackOffPeriod(3000L);
-        template.setBackOffPolicy(backOffPolicy);
-
-        MaxAttemptsRetryPolicy retryPolicy = new MaxAttemptsRetryPolicy();
-        retryPolicy.setMaxAttempts(3);
-        template.setRetryPolicy(retryPolicy);
-
-        return template;
-    }
-
-    private ServiceInstance getInstance() {
-        return discoveryClient.getInstances(statsServiceId)
-                .stream()
-                .findFirst()
-                .orElseThrow(() -> new StatsServerUnavailable(
-                        "Ошибка обнаружения адреса сервиса статистики с id: " + statsServiceId
-                ));
-    }
-
-    private String makeUri(String path) {
-        ServiceInstance instance = retryTemplate.execute(context -> getInstance());
-        return "http://" + instance.getHost() + ":" + instance.getPort() + path;
+    private <T> java.util.stream.Stream<T> asStream(Iterator<T> iterator) {
+        return StreamSupport.stream(
+                java.util.Spliterators.spliteratorUnknownSize(iterator, java.util.Spliterator.ORDERED),
+                false
+        );
     }
 }

@@ -1,131 +1,217 @@
-# Explore With Me: Stage 2 Microservices
+# Explore With Me
 
-## Архитектура
+Актуальное состояние репозитория: многомодульный Maven-проект на Java 21, Spring Boot 3.3.4 и Spring Cloud 2023.0.3. Проект разделён на инфраструктурный слой, прикладные сервисы и статистический контур на gRPC + Kafka.
 
-Проект разделён на инфраструктурный слой и прикладные сервисы.
+## Модули
 
-- `infra/config-server` — централизованная конфигурация из каталога `config/`.
-- `infra/discovery-server` — реестр сервисов Eureka.
-- `infra/gateway-server` — единая точка входа на порту `8080`.
-- `stats-service/stats-server` — сервис статистики просмотров.
-- `core/event-service` — управление событиями, категориями и подборками.
-- `core/request-service` — управление заявками на участие.
-- `core/user-service` — администрирование пользователей.
-- `core/rating-service` — дополнительная функциональность: рейтинги событий.
-- `core/common` — общие DTO, обработка ошибок, утилиты и Feign-клиенты.
-- `core/main-service` — облегчённая оболочка, оставленная как переходный модуль без бизнес-логики.
+### `infra`
 
-## Конфигурация
+- `infra/config-server` — централизованная конфигурация из каталога `config/`
+- `infra/discovery-server` — реестр сервисов Eureka
+- `infra/gateway-server` — единая точка входа
 
-Конфигурации сервисов вынесены в `config/`:
+### `core`
 
-- `config/application.yml` — общие настройки Eureka, actuator и Feign timeouts.
-- `config/event-service.yml` — БД и логирование `event-service`.
-- `config/request-service.yml` — БД и логирование `request-service`.
-- `config/user-service.yml` — БД и логирование `user-service`.
-- `config/rating-service.yml` — БД и логирование `rating-service`.
-- `config/stats-server.yml` — конфигурация сервиса статистики.
-- `config/gateway-server.yml` — маршруты Gateway.
-- `config/main-service.yml` — настройки переходного `main-service`.
+- `core/common` — общие DTO, Feign-клиенты, ошибки и утилиты
+- `core/event-service` — публичный, приватный и админский API событий, категорий и подборок
+- `core/request-service` — заявки на участие
+- `core/user-service` — админский CRUD пользователей
+- `core/rating-service` — реакции и агрегированный рейтинг событий
+- `core/main-service` — переходный модуль без самостоятельной бизнес-логики
 
-Все прикладные сервисы получают конфигурацию через Config Server и регистрируются в Eureka.
+### `stats-service`
+
+- `stats-service/stats-client` — клиент для вызовов `collector` и `analyzer`
+- `stats-service/stats-dto` — общие Avro / protobuf модели
+- `stats-service/collector` — приём действий пользователей по gRPC и отправка их в Kafka
+- `stats-service/aggregator` — расчёт similarity между событиями
+- `stats-service/analyzer` — рекомендации, похожие события и interaction counts по gRPC
+
+Каталог `stats-service/stats-server` в репозитории присутствует, но в текущий [`stats-service/pom.xml`](./stats-service/pom.xml) не включён и в стандартную верхнеуровневую сборку не входит.
+
+## Инфраструктура и конфигурация
+
+`docker-compose.yml` поднимает:
+
+- `ewm-db` — PostgreSQL для прикладных сервисов, порт `5432`
+- `stats-db` — PostgreSQL для статистического контура, порт `5433`
+- `kafka` — брокер Kafka, порт `9092`
+- `zookeeper` — Zookeeper, порт `2181`
+
+Актуальные конфиги в `config/`:
+
+- `config/application.yml` — общие настройки Eureka, Kafka и базовые свойства
+- `config/gateway-server.yml`
+- `config/event-service.yml`
+- `config/request-service.yml`
+- `config/user-service.yml`
+- `config/rating-service.yml`
+- `config/main-service.yml`
+- `config/collector.yml`
+- `config/aggregator.yml`
+- `config/analyzer.yml`
+
+`config/stats-server.yml` сохранён в репозитории для старого `stats-server`, но не используется текущим статистическим контуром.
+
+## Как устроена статистика
+
+1. `event-service` и `request-service` отправляют действия пользователей в `collector` по gRPC через `stats-client`.
+2. `collector` пишет действия в Kafka-топик `stats.user-actions.v1`.
+3. `aggregator` читает действия, пересчитывает схожесть событий и публикует результаты в `stats.events-similarity.v1`.
+4. `analyzer` читает оба Kafka-топика, хранит агрегаты в `stats-db` и отдаёт по gRPC:
+   - рекомендации для пользователя
+   - похожие события
+   - количество взаимодействий по списку событий
 
 ## Маршрутизация через Gateway
 
-Все внешние запросы должны идти через `gateway-server` на порт `8080`.
+Сейчас в [`config/gateway-server.yml`](./config/gateway-server.yml) настроены только следующие внешние маршруты:
 
-- `/admin/users/**` -> `user-service`
-- `/users/*/requests/**` -> `request-service`
-- `/users/*/events/*/requests` -> `request-service`
-- `/users/*/events/*/rating` -> `rating-service`
-- `/events/*/rating` -> `rating-service`
-- `/admin/categories/**`, `/categories/**`, `/admin/compilations/**`, `/compilations/**`, `/admin/events/**`, `/users/*/events/**`, `/events/**` -> `event-service`
-- `/hit`, `/stats` -> `stats-server`
+- `/admin/users/**` -> `USER-SERVICE`
+- `/users/*/requests/**` -> `REQUEST-SERVICE`
+- `/users/*/events/*/requests` -> `EVENT-SERVICE`
+- `/admin/categories/**`, `/categories/**`, `/admin/compilations/**`, `/compilations/**`, `/admin/events/**`, `/users/*/events/**`, `/events/**` -> `EVENT-SERVICE`
 
-## Внутренний API
+Важно: в текущем gateway-конфиге нет маршрутов для `rating-service` и старого `/hit`, `/stats` API.
 
-Межсервисное взаимодействие реализовано через OpenFeign и Eureka.
+## Внутренние интеграции
 
 ### `user-service`
 
 - `GET /internal/users/{userId}/short`
-  Возвращает `UserShortDto` для проверки существования пользователя и сохранения инициатора в `event-service`.
 
 ### `event-service`
 
 - `GET /internal/events/{eventId}`
-  Возвращает `EventInternalDto` со статусом события, инициатором, лимитом участников и текущим числом подтверждённых заявок.
-- `PATCH /internal/events/{eventId}/confirmed-requests?delta={n}`
-  Меняет счётчик подтверждённых заявок на событии.
+- `POST /internal/events/{eventId}/confirmed-requests?delta={n}`
 
 ### `request-service`
 
 - `GET /internal/users/{userId}/events/{eventId}/requests`
-  Возвращает список заявок для события инициатора.
-- `PATCH /internal/users/{userId}/events/{eventId}/requests`
-  Подтверждает или отклоняет заявки для события инициатора.
+- `POST /internal/users/{userId}/events/{eventId}/requests`
+- `GET /internal/users/{userId}/events/{eventId}/requests/exists`
 
 ### `rating-service`
 
 - `POST /internal/ratings/summary`
-  Принимает список `eventId` и возвращает агрегированные рейтинги пачкой без N+1 запросов.
 
-## Границы сервисов
+## Что делает каждый сервис
 
 ### `event-service`
 
-- Публичный и приватный API событий.
-- Админский API событий.
-- Категории.
-- Подборки.
-- Обогащение событий просмотрами из `stats-service`.
-- Обогащение событий рейтингом из `rating-service` с fallback в `0`, если сервис рейтинга недоступен.
-- Хранение снапшота инициатора (`user_id`, `initiator_name`), чтобы публичные запросы событий продолжали работать даже без `user-service`.
+- управляет событиями, категориями и подборками
+- обогащает события interaction count и рекомендациями через `analyzer`
+- запоминает снапшот инициатора в событии, чтобы публичное чтение не зависело жёстко от `user-service`
 
 ### `request-service`
 
-- Создание заявки текущим пользователем.
-- Получение/отмена собственных заявок.
-- Модерация заявок инициатором события.
-- Синхронизация количества подтверждённых заявок через внутренний API `event-service`.
+- создаёт, показывает и отменяет заявки
+- модерирует заявки инициатором события
+- отправляет регистрации в `collector`
 
 ### `user-service`
 
-- Создание, получение и удаление пользователей по админскому API.
-- Внутренний API для остальных сервисов.
+- предоставляет админский CRUD пользователей
+- отдаёт внутренний `UserShortDto` для остальных сервисов
 
 ### `rating-service`
 
-- Постановка/удаление реакции.
-- Получение сводки рейтинга по событию.
-- Пакетное получение рейтингов для списков событий.
+- принимает и удаляет реакции пользователей
+- считает агрегированный рейтинг события
+- отдаёт пачку summary для `event-service`
 
-## Устойчивость к сбоям
+### `collector`
 
-`event-service` не завязан критически на остальные прикладные сервисы для публичного чтения:
+- принимает пользовательские действия по gRPC
+- сериализует их и пишет в Kafka
 
-- если `stats-service` недоступен, просмотры возвращаются как `0`;
-- если `rating-service` недоступен, рейтинг возвращается как `0`;
-- инициатор события берётся из сохранённого снапшота, поэтому публичные ответы событий не требуют `user-service`.
+### `aggregator`
 
-Это позволяет оставлять рабочими публичные сценарии событий даже при остановке соседних сервисов.
+- пересчитывает similarity между событиями по поступающим действиям
+- публикует только актуальные значения similarity в Kafka
 
-## Сборка
+### `analyzer`
+
+- хранит агрегаты действий и similarity
+- отдаёт рекомендации, похожие события и interaction counts по gRPC
+
+## Локальный запуск
+
+Требования:
+
+- Java 21+
+- Maven
+- Docker / Docker Compose
+
+Инфраструктура:
 
 ```bash
-mvn compile
+docker compose up -d
+```
+
+Сборка:
+
+```bash
+mvn clean package
+```
+
+Рекомендуемый порядок запуска сервисов:
+
+1. `infra/discovery-server`
+2. `infra/config-server`
+3. `stats-service/collector`
+4. `stats-service/aggregator`
+5. `stats-service/analyzer`
+6. `core/user-service`
+7. `core/request-service`
+8. `core/rating-service`
+9. `core/event-service`
+10. `infra/gateway-server`
+
+Для ручного запуска через Maven можно использовать:
+
+```bash
+mvn -q -pl <module> spring-boot:run
+```
+
+Полезные порты:
+
+- `8761` — Eureka
+- `8080` — Gateway
+- `5432` — `ewm-db`
+- `5433` — `stats-db`
+- `9092` — Kafka
+
+## Сборка и проверка
+
+Полная сборка:
+
+```bash
+mvn clean package
+```
+
+Все тесты:
+
+```bash
 mvn test
 ```
 
-## Внешний API
+Точечная проверка `aggregator`:
+
+```bash
+mvn -q -pl stats-service/aggregator -am test
+```
+
+## Актуальные tester-отчёты
+
+В корне репозитория лежат рабочие отчёты без ошибок:
+
+- `tester-report-collection.txt`
+- `tester-report-aggregation-fixed.txt`
+- `tester-report-smoke.txt`
+
+## Спецификации и Postman
 
 - Основной API: [ewm-main-service-spec.json](./ewm-main-service-spec.json)
 - API статистики: [ewm-stats-service-spec.json](./ewm-stats-service-spec.json)
-
-## Postman
-
-Для проверки можно использовать:
-
-- основной набор тестов микросервисного этапа;
-- `postman/feature.json` для дополнительной функциональности рейтингов;
-- коллекции, переданные преподавателем для `main-service` и `stats-service`.
+- Дополнительная Postman-коллекция: `postman/feature.json`
